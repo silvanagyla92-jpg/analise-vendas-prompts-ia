@@ -22,12 +22,10 @@ Arquivo reservado para a análise do comportamento e desempenho dos clientes.
 
 Os resultados serão registrados somente após a análise e validação da base efetivamente utilizada. Critérios como recorrência ou inatividade deverão ser definidos antes de qualquer classificação.
 
-## 4. Contato
-
-**Autor:** Nágyla Silva
+---
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
+**Autora:** Nágyla Silva
 
-**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
+Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
