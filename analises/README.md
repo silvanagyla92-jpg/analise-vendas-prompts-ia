@@ -7,7 +7,7 @@ Esta pasta documenta as análises realizadas sobre os dados de vendas e registra
 ### 1.1 Finalidades
 
 - Identificar padrões de vendas;
-- Comparar desempenho entre produtos, períodos, clientes e regiões, quando disponíveis;
+- Comparar desempenho entre produtos, períodos, clientes e países de entrega, quando disponíveis;
 - Encontrar tendências, concentrações e possíveis anomalias;
 - Transformar resultados quantitativos em interpretações de negócio;
 - Registrar limitações e pontos que exigem validação.
@@ -42,10 +42,10 @@ Cada análise deverá apresentar, quando aplicável:
 - `analise_vendas.md` — análise do comportamento geral das vendas;
 - `analise_produtos.md` — desempenho dos produtos;
 - `analise_clientes.md` — comportamento dos clientes;
-- `analise_regioes.md` — distribuição e desempenho por região;
+- `analise_regioes.md` — distribuição e desempenho por país de entrega;
 - `insights_estrategicos.md` — síntese das descobertas relevantes.
 
-Os valores e conclusões quantitativas serão preenchidos após a análise da base efetivamente utilizada no projeto.
+Os valores e conclusões quantitativas serão preenchidos após a análise e validação das bases selecionadas.
 
 ---
 
