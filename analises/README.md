@@ -34,6 +34,7 @@ Cada análise deverá apresentar, quando aplicável:
 - `analise_vendas.md` — análise do comportamento geral das vendas;
 - `analise_produtos.md` — desempenho dos produtos;
 - `analise_clientes.md` — comportamento dos clientes;
+- `analise_regioes.md` — distribuição e desempenho por região;
 - `insights_estrategicos.md` — síntese das descobertas relevantes.
 
 Os valores e conclusões quantitativas serão preenchidos após a análise da base efetivamente utilizada no projeto.
