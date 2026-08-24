@@ -2,7 +2,7 @@
 
 ## 1. Objetivo
 
-Analisar a evolução das vendas ao longo do tempo, identificando tendências, períodos de maior e menor desempenho e possíveis mudanças de comportamento.
+Analisar a evolução das vendas ao longo do tempo, identificando tendências, variações relevantes, períodos de maior e menor desempenho e possíveis pontos de atenção.
 
 ## 2. Prompt
 
@@ -11,38 +11,61 @@ Analisar a evolução das vendas ao longo do tempo, identificando tendências, p
 ```text
 Atue como um analista de dados especializado em séries temporais e desempenho comercial.
 
-Analise a evolução das vendas utilizando os campos de data disponíveis na base.
+Analise exclusivamente os dados fornecidos e não utilize informações externas para preencher lacunas.
 
-Antes da análise:
-- identifique o campo de data utilizado;
-- informe o período coberto pelos dados;
-- verifique se existem datas ausentes, inválidas ou períodos incompletos;
-- explique a granularidade utilizada: dia, semana, mês, trimestre ou ano;
-- identifique as moedas presentes nos dados.
+Antes dos cálculos:
 
-Quando os dados permitirem, calcule e compare:
-- quantidade de vendas por período;
-- faturamento por período, mantendo moedas separadas quando necessário;
-- ticket médio por período, sem misturar moedas;
+1. Identifique o campo de data utilizado.
+2. Informe a data inicial e final disponíveis.
+3. Verifique datas ausentes, inválidas ou períodos incompletos.
+4. Defina a granularidade da análise: diária, semanal, mensal, trimestral ou anual, conforme adequado aos dados.
+5. Identifique as moedas existentes.
+6. Verifique se existem duplicidades ou registros que possam distorcer a evolução temporal.
+
+Quando os dados permitirem, calcule:
+
+- quantidade de transações por período;
+- quantidade de unidades vendidas por período;
+- valor das vendas por período, mantendo moedas separadas;
+- ticket médio por período e por moeda, quando aplicável;
 - crescimento ou queda percentual entre períodos comparáveis;
-- melhor e pior período;
-- variações relevantes em relação à média.
+- melhor e pior período segundo cada métrica utilizada;
+- variações em relação ao período anterior;
+- desvios relevantes em relação à média, quando a comparação for estatisticamente adequada.
 
-Não some ou compare diretamente valores monetários de moedas diferentes sem uma regra de conversão documentada.
+Para comparações temporais:
 
-Procure identificar:
+- utilize períodos de mesma duração sempre que possível;
+- sinalize períodos incompletos;
+- não compare diretamente valores de moedas diferentes;
+- explique a fórmula utilizada para percentuais de crescimento ou queda.
+
+Investigue:
+
 1. tendências de crescimento ou queda;
-2. períodos de pico;
-3. períodos de baixa;
-4. possíveis sazonalidades;
-5. mudanças bruscas ou anomalias;
-6. produtos ou categorias que possam estar associados às principais variações.
+2. picos e vales de vendas;
+3. possíveis padrões sazonais;
+4. mudanças bruscas ou anomalias;
+5. alterações relevantes por produto, canal ou país de entrega, quando os dados permitirem.
 
-Não atribua causalidade a uma tendência apenas com base na correlação temporal. Quando não houver informação suficiente para explicar uma mudança, apresente-a como hipótese e indique quais dados adicionais seriam necessários.
+IMPORTANTE:
+- Correlação temporal não prova causalidade.
+- Não atribua uma causa a uma variação sem evidência.
+- Não confunda aumento de quantidade com aumento de faturamento.
+- Não confunda faturamento com lucro.
+- Não invente eventos externos para explicar mudanças observadas.
 
-Apresente os resultados em tabela e, quando apropriado, use percentuais para facilitar a comparação.
+Para cada tendência relevante, apresente:
+
+- Evidência: dado ou cálculo observado;
+- Comparação: períodos ou grupos comparados;
+- Interpretação: o que os dados permitem concluir;
+- Hipótese: somente quando houver uma explicação plausível que ainda não possa ser comprovada;
+- Dados adicionais necessários: quando a explicação não puder ser confirmada;
+- Confiança: alta, média ou baixa.
 
 Finalize com:
+
 - 3 principais tendências observadas;
 - 3 pontos que exigem investigação;
 - 3 perguntas para aprofundamento.
@@ -52,16 +75,20 @@ Finalize com:
 
 ### 3.1 Verificações
 
-- Conferir o período analisado.
-- Verificar se períodos incompletos foram tratados corretamente.
+- Confirmar a data inicial e final utilizadas.
+- Verificar o tratamento de períodos incompletos.
 - Recalcular taxas de crescimento e queda.
-- Confirmar que comparações monetárias respeitam a moeda ou uma conversão documentada.
-- Não confundir variação temporal com causalidade.
-- Confirmar se comparações entre períodos possuem a mesma granularidade.
+- Confirmar a granularidade dos períodos comparados.
+- Verificar se moedas diferentes permaneceram separadas.
+- Conferir médias, totais e percentuais.
+- Confirmar se tendências apresentadas são sustentadas pelos dados.
+- Verificar se hipóteses foram diferenciadas de fatos.
+- Não aceitar explicações causais sem evidência.
+- Registrar anomalias e limitações relevantes.
 
 ## 4. Resultado Esperado
 
-Uma leitura temporal das vendas que permita reconhecer tendências e pontos de atenção sem misturar moedas ou extrapolar conclusões além das evidências disponíveis.
+Uma análise temporal verificável das vendas, capaz de demonstrar tendências, variações e pontos de atenção sem misturar moedas, ignorar períodos incompletos ou extrapolar conclusões além das evidências disponíveis.
 
 ---
 
