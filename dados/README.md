@@ -4,30 +4,60 @@ Esta pasta concentra as bases de dados utilizadas no projeto de análise de vend
 
 ## 1. Fonte dos Dados
 
-O desafio da DIO disponibiliza o repositório `dataset-gamesshop` como base de dados para o exercício. O projeto atual é um repositório independente, criado para documentar a aplicação de prompts e a análise dos dados.
+Os dados foram disponibilizados pela **Digital Innovation One (DIO)** como parte do laboratório **Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas**.
 
-A fonte original será indicada de forma transparente na documentação e não será confundida com a autoria das análises realizadas neste projeto.
+## 2. Bases Disponíveis
 
-## 2. Organização
+### 2.1 Arquivos
 
-### 2.1 Estrutura dos arquivos
+- `Meganium_Sales_Data.csv` — base principal de vendas;
+- `Meganium_Sales_Data_-_AliExpress.csv` — dados de vendas do canal AliExpress;
+- `Meganium_Sales_Data_-_Etsy.csv` — dados de vendas do canal Etsy;
+- `Meganium_Sales_Data_-_Shopee.csv` — dados de vendas do canal Shopee;
+- `Updated_Anbernic_Sales_Data.csv` — versão derivada da base principal, com alteração dos nomes dos produtos e reorganização das colunas.
 
-- `planilhas/` — arquivos de planilha utilizados nas análises;
-- arquivos de apoio — materiais necessários para compreender ou reproduzir a análise, quando aplicável.
+### 2.2 Observação sobre sobreposição
 
-## 3. Critérios de Verificação
+A `Updated_Anbernic_Sales_Data.csv` contém registros que correspondem aos registros da base principal por identificador de nota fiscal (`invoice_id`), com alterações nos nomes dos produtos. Por isso, ela **não deve ser somada à base principal como uma fonte independente**, para evitar dupla contagem.
 
-Antes da análise, os dados devem ser verificados quanto a:
+Os arquivos por canal também devem ser avaliados quanto à sobreposição antes de qualquer consolidação.
 
-- estrutura das colunas;
+## 3. Estrutura dos Dados
+
+As bases contêm campos relacionados a:
+
+- produto;
+- data da venda;
+- quantidade;
+- preço unitário;
+- preço total;
+- moeda;
+- canal/site;
+- cupom e valor do desconto;
+- data de nascimento do comprador;
+- nome do comprador;
+- país de entrega;
+- identificador da venda.
+
+## 4. Critérios de Verificação
+
+Antes da consolidação dos resultados, os dados devem ser verificados quanto a:
+
+- estrutura e compatibilidade das colunas;
 - tipos de dados;
 - valores ausentes;
-- duplicidades;
-- consistência dos registros;
+- duplicidades por `invoice_id`;
+- consistência entre `quantity`, `unit_price` e `total_price`;
+- moedas utilizadas;
 - período analisado;
+- sobreposição entre arquivos;
 - métricas disponíveis.
 
-> Nenhum resultado quantitativo será apresentado como fato antes da verificação da base efetivamente utilizada.
+### 4.1 Cuidados analíticos
+
+Os valores de `total_price` não devem ser somados entre moedas diferentes sem uma regra de conversão documentada. A análise financeira deve preservar a moeda ou aplicar uma conversão explícita e consistente.
+
+Os campos `buyer_name` e `buyer_birth_date` não devem ser expostos nos resultados analíticos. Para análises de clientes, deve-se utilizar identificadores agregados ou métricas que não revelem dados pessoais.
 
 ---
 
