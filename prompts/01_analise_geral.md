@@ -1,10 +1,12 @@
 # Prompt 01 — Análise Geral de Vendas
 
-## Objetivo
+## 1. Objetivo
 
 Realizar uma primeira leitura estruturada da base de vendas para compreender sua composição, identificar padrões relevantes e levantar hipóteses que possam orientar análises posteriores.
 
-## Prompt
+## 2. Prompt
+
+### 2.1 Instrução para a IA
 
 ```text
 Atue como um analista de dados especializado em vendas e inteligência de negócios.
@@ -39,7 +41,9 @@ Para cada insight, informe:
 Finalize com até 5 perguntas de investigação que poderiam aprofundar a análise.
 ```
 
-## Critérios de validação
+## 3. Critérios de Validação
+
+### 3.1 Verificações
 
 - Confirmar se todos os números apresentados podem ser reproduzidos a partir da base.
 - Verificar se o modelo distinguiu observação de interpretação.
@@ -47,14 +51,16 @@ Finalize com até 5 perguntas de investigação que poderiam aprofundar a análi
 - Não aceitar conclusões causais que não sejam sustentadas pelos dados.
 - Registrar limitações decorrentes da estrutura ou qualidade da base.
 
-## Resultado esperado
+## 4. Resultado Esperado
 
 Uma visão inicial e verificável do conjunto de dados, servindo como ponto de partida para as análises específicas de produtos, vendas, clientes, regiões e insights estratégicos.
 
----
+## 5. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
