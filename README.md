@@ -75,11 +75,11 @@ analise-vendas-prompts-ia/
 
 ## 5. Fonte dos Dados
 
-Os dados utilizados neste desafio foram disponibilizados pela **Digital Innovation One (DIO)** como parte do laboratório **Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas**, integrante da trilha **Criando Prompts Inteligentes**.
+Os dados utilizados neste projeto foram disponibilizados pela **Digital Innovation One (DIO)** no laboratório **[Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)**, integrante da trilha **Criando Prompts Inteligentes**.
 
-A DIO disponibiliza, entre os recursos do desafio, o repositório **[dataset-gamesshop](https://github.com/digitalinnovationone/dataset-gamesshop)**, que contém as tabelas/base de dados utilizadas como referência para o exercício. O repositório pode ser utilizado pelos participantes como fonte dos dados, referência e exemplo de organização, inclusive podendo ser feito fork, conforme as possibilidades oferecidas pelo próprio GitHub.
+A base de dados utilizada no exercício é o **[dataset-gamesshop](https://github.com/digitalinnovationone/dataset-gamesshop)**, disponibilizado pela DIO para apoiar a realização da atividade.
 
-Este projeto, entretanto, foi criado como **repositório próprio da autora**, sem fork do repositório `digitalinnovationone/dataset-gamesshop`. A autoria deste projeto está relacionada à organização da solução, elaboração e aplicação dos prompts, análise, validação, interpretação e documentação dos resultados.
+Neste projeto, a base é utilizada para realizar a análise de vendas, desenvolver e aplicar prompts, validar as respostas geradas por Inteligência Artificial e documentar os insights obtidos.
 
 ### 5.1 Referência do desafio
 
