@@ -1,10 +1,12 @@
 # Prompt 02 — Análise de Produtos
 
-## Objetivo
+## 1. Objetivo
 
 Identificar quais produtos apresentam melhor e pior desempenho e compreender sua contribuição para vendas e faturamento.
 
-## Prompt
+## 2. Prompt
+
+### 2.1 Instrução para a IA
 
 ```text
 Atue como um analista de dados especializado em desempenho de produtos.
@@ -40,7 +42,9 @@ Para cada achado relevante, explique:
 Finalize indicando quais produtos ou categorias merecem investigação comercial e por quê.
 ```
 
-## Critérios de validação
+## 3. Critérios de Validação
+
+### 3.1 Verificações
 
 - Confirmar os rankings diretamente na base.
 - Conferir se quantidade e faturamento não foram tratados como a mesma métrica.
@@ -48,14 +52,16 @@ Finalize indicando quais produtos ou categorias merecem investigação comercial
 - Verificar percentuais e médias.
 - Identificar empates e critérios utilizados em caso de empate.
 
-## Resultado esperado
+## 4. Resultado Esperado
 
 Um ranking confiável do desempenho dos produtos, permitindo identificar concentração de vendas, produtos de destaque e oportunidades de investigação.
 
----
+## 5. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
