@@ -2,7 +2,7 @@
 
 ## 1. Objetivo
 
-Realizar uma primeira leitura estruturada da base de vendas para compreender sua composição, identificar padrões relevantes e levantar hipóteses que possam orientar análises posteriores.
+Realizar uma primeira leitura estruturada da base de vendas para compreender sua composição, verificar a qualidade dos dados e identificar padrões relevantes que possam orientar as análises posteriores.
 
 ## 2. Prompt
 
@@ -11,38 +11,49 @@ Realizar uma primeira leitura estruturada da base de vendas para compreender sua
 ```text
 Atue como um analista de dados especializado em vendas e inteligência de negócios.
 
-Analise a base de dados de vendas fornecida, considerando exclusivamente as informações presentes nos dados.
+Analise exclusivamente a base de dados fornecida. Não utilize informações externas para preencher lacunas ou produzir resultados.
 
 Antes de interpretar os resultados:
-1. Identifique as colunas disponíveis e descreva brevemente a função de cada uma.
-2. Verifique o período abrangido pela base, quando houver informação de data.
-3. Identifique possíveis valores ausentes, duplicidades, inconsistências ou registros que possam afetar a análise.
-4. Verifique a existência de múltiplas moedas antes de calcular ou comparar valores monetários.
-5. Diferencie claramente fatos observados, cálculos, inferências e hipóteses.
-6. Não invente valores que não estejam presentes na base.
-7. Não exponha nomes, datas de nascimento ou outros dados pessoais dos compradores nos resultados.
 
-Em seguida, apresente:
+1. Identifique as colunas disponíveis e descreva brevemente a função de cada uma.
+2. Informe a quantidade de registros analisados.
+3. Verifique o período abrangido pela base, quando houver informação de data.
+4. Verifique valores ausentes, duplicidades, inconsistências e possíveis registros inválidos.
+5. Identifique as moedas existentes e mantenha os valores monetários separados por moeda.
+6. Identifique os canais de venda disponíveis.
+7. Identifique os países de entrega disponíveis, quando essa informação existir.
+8. Diferencie fatos observados, cálculos, inferências e hipóteses.
+9. Não invente valores, percentuais, rankings ou informações que não possam ser calculados diretamente a partir da base.
+10. Não exponha nomes, datas de nascimento ou outros dados pessoais dos compradores.
+
+Em seguida, apresente, somente quando calculável:
+
 - quantidade total de registros;
-- quantidade de vendas/transações, se essa métrica puder ser determinada;
-- faturamento ou valor total, preservando a moeda ou utilizando uma conversão explicitamente documentada;
-- ticket médio, quando calculável e comparável;
-- principais produtos ou categorias;
-- períodos de maior e menor desempenho, quando houver datas;
-- principais padrões identificados;
+- quantidade de transações distintas, utilizando um identificador adequado quando disponível;
+- valor total das vendas por moeda;
+- ticket médio por moeda, quando aplicável;
+- principais produtos por quantidade e/ou valor, sempre respeitando a moeda;
+- desempenho por canal de venda;
+- desempenho por país de entrega;
+- períodos de maior e menor volume de vendas, quando houver datas suficientes;
+- padrões relevantes;
 - possíveis anomalias ou pontos que mereçam investigação.
 
-Não some valores monetários de moedas diferentes sem uma regra de conversão documentada.
+IMPORTANTE:
+- Não some valores de moedas diferentes.
+- Não trate faturamento como lucro, pois a base não fornece necessariamente custos e margens.
+- Não atribua causalidade aos padrões encontrados sem evidência suficiente.
+- Se uma métrica não puder ser calculada com segurança, informe explicitamente que ela não pode ser determinada.
 
-Organize a resposta em uma tabela sempre que isso facilitar a comparação.
+Para cada insight relevante, informe:
 
-Para cada insight, informe:
-- evidência encontrada nos dados;
-- interpretação;
-- possível impacto para o negócio;
-- nível de confiança (alto, médio ou baixo).
+- Evidência: dado ou cálculo que sustenta o insight;
+- Interpretação: o que o resultado indica;
+- Impacto potencial: possível relevância para o negócio;
+- Confiança: alta, média ou baixa;
+- Limitação: quando houver.
 
-Finalize com até 5 perguntas de investigação que poderiam aprofundar a análise.
+Finalize com até 5 perguntas de investigação que possam aprofundar a análise sem pressupor respostas que não estejam nos dados.
 ```
 
 ## 3. Critérios de Validação
@@ -50,16 +61,18 @@ Finalize com até 5 perguntas de investigação que poderiam aprofundar a análi
 ### 3.1 Verificações
 
 - Confirmar se todos os números apresentados podem ser reproduzidos a partir da base.
-- Verificar se o modelo distinguiu observação de interpretação.
-- Conferir cálculos de totais e médias.
-- Verificar se moedas diferentes foram mantidas separadas ou convertidas por regra documentada.
-- Não aceitar conclusões causais que não sejam sustentadas pelos dados.
-- Não expor dados pessoais dos compradores.
+- Verificar se o modelo distinguiu observação, cálculo, interpretação e hipótese.
+- Conferir cálculos de totais, médias e percentuais.
+- Verificar se moedas diferentes foram mantidas separadas.
+- Conferir se rankings respeitam a dimensão monetária utilizada.
+- Verificar se não foram apresentadas conclusões sobre lucro sem dados de custo ou margem.
+- Verificar se não foram apresentadas conclusões causais sem evidência.
+- Não aceitar exposição de dados pessoais dos compradores.
 - Registrar limitações decorrentes da estrutura ou qualidade da base.
 
 ## 4. Resultado Esperado
 
-Uma visão inicial e verificável do conjunto de dados, servindo como ponto de partida para as análises específicas de produtos, vendas, clientes, países de entrega e insights estratégicos.
+Uma visão inicial, verificável e documentada do conjunto de dados, servindo como ponto de partida para as análises específicas de produtos, vendas, clientes, países de entrega e insights estratégicos.
 
 ---
 
