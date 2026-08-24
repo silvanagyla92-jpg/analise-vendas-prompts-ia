@@ -17,18 +17,22 @@ Antes de interpretar os resultados:
 1. Identifique as colunas disponíveis e descreva brevemente a função de cada uma.
 2. Verifique o período abrangido pela base, quando houver informação de data.
 3. Identifique possíveis valores ausentes, duplicidades, inconsistências ou registros que possam afetar a análise.
-4. Diferencie claramente fatos observados, cálculos, inferências e hipóteses.
-5. Não invente valores que não estejam presentes na base.
+4. Verifique a existência de múltiplas moedas antes de calcular ou comparar valores monetários.
+5. Diferencie claramente fatos observados, cálculos, inferências e hipóteses.
+6. Não invente valores que não estejam presentes na base.
+7. Não exponha nomes, datas de nascimento ou outros dados pessoais dos compradores nos resultados.
 
 Em seguida, apresente:
 - quantidade total de registros;
 - quantidade de vendas/transações, se essa métrica puder ser determinada;
-- faturamento ou valor total, se houver campo adequado;
-- ticket médio, quando calculável;
+- faturamento ou valor total, preservando a moeda ou utilizando uma conversão explicitamente documentada;
+- ticket médio, quando calculável e comparável;
 - principais produtos ou categorias;
 - períodos de maior e menor desempenho, quando houver datas;
 - principais padrões identificados;
 - possíveis anomalias ou pontos que mereçam investigação.
+
+Não some valores monetários de moedas diferentes sem uma regra de conversão documentada.
 
 Organize a resposta em uma tabela sempre que isso facilitar a comparação.
 
@@ -48,12 +52,14 @@ Finalize com até 5 perguntas de investigação que poderiam aprofundar a análi
 - Confirmar se todos os números apresentados podem ser reproduzidos a partir da base.
 - Verificar se o modelo distinguiu observação de interpretação.
 - Conferir cálculos de totais e médias.
+- Verificar se moedas diferentes foram mantidas separadas ou convertidas por regra documentada.
 - Não aceitar conclusões causais que não sejam sustentadas pelos dados.
+- Não expor dados pessoais dos compradores.
 - Registrar limitações decorrentes da estrutura ou qualidade da base.
 
 ## 4. Resultado Esperado
 
-Uma visão inicial e verificável do conjunto de dados, servindo como ponto de partida para as análises específicas de produtos, vendas, clientes, regiões e insights estratégicos.
+Uma visão inicial e verificável do conjunto de dados, servindo como ponto de partida para as análises específicas de produtos, vendas, clientes, países de entrega e insights estratégicos.
 
 ---
 
