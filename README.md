@@ -75,9 +75,16 @@ analise-vendas-prompts-ia/
 
 ## 5. Fonte dos Dados
 
-O desafio disponibiliza o repositório **dataset-gamesshop**, da Digital Innovation One (DIO), como recurso para o exercício. Este repositório é um **projeto independente**, sem fork do repositório original.
+Os dados utilizados neste desafio foram disponibilizados pela **Digital Innovation One (DIO)** como parte do laboratório **Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas**, integrante da trilha **Criando Prompts Inteligentes**.
 
-A fonte dos dados será identificada de forma transparente na documentação. A autoria deste projeto está relacionada à organização, elaboração dos prompts, análise, validação, interpretação e documentação dos resultados.
+A DIO disponibiliza, entre os recursos do desafio, o repositório **[dataset-gamesshop](https://github.com/digitalinnovationone/dataset-gamesshop)**, que contém as tabelas/base de dados utilizadas como referência para o exercício. O repositório pode ser utilizado pelos participantes como fonte dos dados, referência e exemplo de organização, inclusive podendo ser feito fork, conforme as possibilidades oferecidas pelo próprio GitHub.
+
+Este projeto, entretanto, foi criado como **repositório próprio da autora**, sem fork do repositório `digitalinnovationone/dataset-gamesshop`. A autoria deste projeto está relacionada à organização da solução, elaboração e aplicação dos prompts, análise, validação, interpretação e documentação dos resultados.
+
+### 5.1 Referência do desafio
+
+- [Laboratório DIO — Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)
+- [Dataset GameShop — Digital Innovation One](https://github.com/digitalinnovationone/dataset-gamesshop)
 
 ## 6. Status Atual
 
@@ -120,6 +127,7 @@ Projeto desenvolvido para fins educacionais e de portfólio, demonstrando compet
 
 ### 11.1 Base disponibilizada para o desafio
 
+- [Laboratório DIO — Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)
 - [Dataset GameShop — Digital Innovation One](https://github.com/digitalinnovationone/dataset-gamesshop)
 
 ## 12. Contato
@@ -131,3 +139,11 @@ Projeto desenvolvido para fins educacionais e de portfólio, demonstrando compet
 **GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
 **LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
+
+---
+
+**Projeto:** Análise de Vendas com Prompts de IA
+
+**Autora:** Nágyla Silva
+
+Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
