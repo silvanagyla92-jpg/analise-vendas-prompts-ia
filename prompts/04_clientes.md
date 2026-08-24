@@ -57,3 +57,11 @@ Finalize com recomendações de investigação comercial baseadas nos padrões o
 ## Resultado esperado
 
 Uma visão estruturada do comportamento dos clientes, com foco em frequência, valor, recorrência e concentração das vendas.
+
+---
+
+**Projeto:** Análise de Vendas com Prompts de IA
+
+**Autora:** Nágyla Silva
+
+Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
