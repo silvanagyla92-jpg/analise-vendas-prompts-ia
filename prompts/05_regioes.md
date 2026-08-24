@@ -2,69 +2,92 @@
 
 ## 1. Objetivo
 
-Avaliar a distribuição geográfica das vendas a partir do campo `delivery_country` e identificar diferenças relevantes de desempenho entre os países de entrega.
+Analisar a distribuição das vendas por país de entrega, identificando diferenças de volume, quantidade de unidades e valor comercial entre os mercados presentes na base.
 
 ## 2. Prompt
 
 ### 2.1 Instrução para a IA
 
 ```text
-Atue como um analista de dados especializado em inteligência comercial e análise geográfica.
+Atue como um analista de dados especializado em vendas e desempenho por mercado.
 
-Analise a distribuição das vendas utilizando exclusivamente os campos geográficos disponíveis na base.
+Analise exclusivamente os dados fornecidos e utilize o campo de país de entrega disponível na base. Não invente regiões ou categorias geográficas que não estejam presentes nos dados.
 
-Primeiro, identifique o nível geográfico disponível. Se a base possuir apenas o campo delivery_country, utilize o país de entrega como dimensão geográfica e não crie regiões artificiais.
+Antes da análise:
 
-Quando possível, calcule para cada país de entrega:
-- quantidade de vendas;
-- quantidade de unidades;
-- faturamento, preservando a moeda;
-- participação percentual dentro de cada moeda ou de uma base previamente convertida;
-- ticket médio, sem misturar moedas;
-- produtos predominantes.
+1. Identifique o campo utilizado para representar o país de entrega.
+2. Verifique valores ausentes, inconsistentes ou inválidos nesse campo.
+3. Identifique as moedas existentes.
+4. Verifique se existem duplicidades que possam alterar os resultados.
+5. Identifique o período analisado.
 
-Compare os países e identifique:
+Quando os dados permitirem, calcule por país de entrega:
+
+- quantidade de transações;
+- quantidade de unidades vendidas;
+- valor das vendas, mantendo cada moeda separada;
+- ticket médio por moeda;
+- participação percentual no volume de transações;
+- participação percentual nas unidades vendidas;
+- participação percentual no valor das vendas, separada por moeda;
+- produtos mais vendidos;
+- canais de venda com maior participação.
+
+Apresente rankings somente quando a comparação for metodologicamente válida.
+
+Para valores monetários:
+
+- não some moedas diferentes;
+- não faça conversão cambial sem uma taxa e uma data de referência explicitamente fornecidas;
+- deixe claro qual moeda está sendo analisada.
+
+Investigue:
+
 1. países com maior volume de vendas;
-2. países com maior faturamento, respeitando a moeda;
-3. países com ticket médio acima ou abaixo da média comparável;
-4. concentração de determinados produtos;
-5. diferenças que mereçam investigação.
+2. países com maior quantidade de unidades;
+3. países com maior valor de vendas dentro de cada moeda;
+4. concentração das vendas por país;
+5. diferenças relevantes entre países;
+6. possíveis mercados que mereçam investigação adicional.
 
-Não some valores monetários de moedas diferentes sem uma regra de conversão documentada.
+IMPORTANTE:
 
-Não interprete um país como 'melhor' apenas porque possui maior faturamento. Considere a métrica utilizada, a moeda e o contexto disponível.
+- País com maior faturamento não significa necessariamente país mais lucrativo.
+- Não atribua causas às diferenças entre países sem evidência.
+- Não utilize informações externas para explicar desempenho, demanda, cultura, economia ou comportamento dos consumidores.
+- Não faça generalizações sobre consumidores de um país com base apenas nos dados de vendas.
+- Não trate correlação entre país e vendas como causalidade.
 
-Não atribua diferenças geográficas a causas econômicas, demográficas, logísticas ou culturais sem dados que sustentem essas explicações. Quando necessário, apresente essas explicações apenas como hipóteses.
+Para cada insight relevante, apresente:
 
-Não exponha nomes, datas de nascimento ou outros dados pessoais dos compradores nos resultados.
+- Evidência: dado ou cálculo que sustenta o insight;
+- Métrica: indicador utilizado;
+- Comparação: países ou grupos comparados;
+- Interpretação: conclusão permitida pelos dados;
+- Limitação: informação que não pode ser determinada;
+- Confiança: alta, média ou baixa.
 
-Apresente rankings e comparações em tabelas.
-
-Para cada diferença relevante, informe:
-- métrica;
-- comparação;
-- evidência;
-- possível interpretação;
-- limitações.
-
-Finalize indicando quais países deveriam receber atenção prioritária em uma investigação comercial e quais dados adicionais seriam úteis.
+Finalize indicando até 5 oportunidades de investigação comercial baseadas nos dados e quais informações adicionais seriam necessárias para confirmar hipóteses.
 ```
 
 ## 3. Critérios de Validação
 
 ### 3.1 Verificações
 
-- Confirmar que `delivery_country` é o campo geográfico utilizado.
-- Verificar valores ausentes ou inconsistentes em `delivery_country`.
-- Conferir totais por país contra o total da base analisada.
-- Recalcular participações percentuais e médias.
-- Manter as moedas separadas quando não houver conversão documentada.
-- Não transformar correlações geográficas em explicações causais.
-- Não expor dados pessoais dos compradores.
+- Confirmar que `delivery_country` foi utilizado como dimensão geográfica.
+- Verificar valores ausentes e grafias inconsistentes de países.
+- Recalcular quantidades, totais e percentuais.
+- Confirmar que moedas diferentes permaneceram separadas.
+- Verificar se os rankings são comparáveis.
+- Conferir o período analisado.
+- Verificar se participações percentuais utilizam o denominador correto.
+- Não aceitar explicações causais sem evidência.
+- Não aceitar generalizações sobre consumidores de um país sem dados que as sustentem.
+- Registrar limitações relevantes.
 
 ## 4. Resultado Esperado
 
-Um panorama comparativo do desempenho por país de entrega, destacando concentração, diferenças de desempenho e oportunidades de investigação, sem misturar moedas ou extrapolar conclusões além das evidências disponíveis.
+Uma análise verificável da distribuição das vendas por país de entrega, destacando concentração, volume, unidades e valor das vendas sem criar categorias geográficas inexistentes ou misturar moedas.
 
 ---
 
