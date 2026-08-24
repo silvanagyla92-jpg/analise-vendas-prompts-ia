@@ -38,9 +38,11 @@ A IA é utilizada como ferramenta de apoio. As respostas geradas não são trata
 
 ```text
 analise-vendas-prompts-ia/
+├── README.md
 ├── dados/
 │   ├── README.md
 │   └── planilhas/
+│       └── README.md
 ├── prompts/
 │   ├── README.md
 │   ├── 01_analise_geral.md
@@ -54,6 +56,7 @@ analise-vendas-prompts-ia/
 │   ├── analise_vendas.md
 │   ├── analise_produtos.md
 │   ├── analise_clientes.md
+│   ├── analise_regioes.md
 │   └── insights_estrategicos.md
 ├── resultados/
 │   ├── README.md
@@ -62,10 +65,10 @@ analise-vendas-prompts-ia/
 ├── evidencias/
 │   ├── README.md
 │   └── imagens/
-├── docs/
-│   ├── README.md
-│   └── metodologia.md
-└── README.md
+│       └── README.md
+└── docs/
+    ├── README.md
+    └── metodologia.md
 ```
 
 ## 🗂️ Fonte dos dados
@@ -73,6 +76,12 @@ analise-vendas-prompts-ia/
 O desafio disponibiliza o repositório **dataset-gamesshop**, da Digital Innovation One (DIO), como recurso para o exercício. Este repositório é um **projeto independente**, sem fork do repositório original.
 
 A fonte dos dados será identificada de forma transparente na documentação. A autoria deste projeto está relacionada à organização, elaboração dos prompts, análise, validação, interpretação e documentação dos resultados.
+
+## 📌 Status atual
+
+A estrutura documental, a metodologia e os prompts do projeto já estão organizados. A base de dados efetivamente utilizada e as evidências de execução ainda precisam ser incorporadas ao repositório antes da conclusão da análise quantitativa.
+
+Enquanto esses arquivos não forem disponibilizados no projeto, os documentos de análise e resultados permanecem como estruturas preparatórias. Nenhum número, ranking ou insight quantitativo é apresentado como resultado final sem validação da base.
 
 ## 📈 Resultados
 
