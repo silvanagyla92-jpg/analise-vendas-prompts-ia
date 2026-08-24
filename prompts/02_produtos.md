@@ -20,16 +20,20 @@ Primeiro, identifique quais campos podem ser usados para medir:
 - preço médio ou valor médio da venda;
 - categoria, marca ou outro agrupamento disponível.
 
+Verifique também se existem múltiplas moedas. Se houver, mantenha os valores monetários separados por moeda ou aplique somente uma conversão explicitamente documentada.
+
 Depois, determine, quando os dados permitirem:
 1. Os 10 produtos com maior quantidade vendida.
-2. Os 10 produtos com maior faturamento.
-3. Os 10 produtos com menor desempenho.
-4. A participação percentual dos principais produtos no total.
+2. Os 10 produtos com maior faturamento, respeitando a moeda.
+3. Os 10 produtos com menor desempenho, definindo previamente a métrica utilizada.
+4. A participação percentual dos principais produtos dentro de cada universo monetário comparável.
 5. Produtos que vendem muito, mas geram menor receita relativa.
 6. Produtos que vendem menos, mas apresentam maior valor médio.
 7. Categorias ou grupos com desempenho acima ou abaixo da média.
 
 Não presuma que alta quantidade vendida significa maior rentabilidade, pois margem de lucro pode não estar disponível.
+
+Não some valores de moedas diferentes sem conversão documentada.
 
 Apresente os resultados em tabelas e informe a métrica utilizada em cada ranking.
 
@@ -48,13 +52,14 @@ Finalize indicando quais produtos ou categorias merecem investigação comercial
 
 - Confirmar os rankings diretamente na base.
 - Conferir se quantidade e faturamento não foram tratados como a mesma métrica.
+- Verificar se valores monetários foram comparados dentro da mesma moeda ou após conversão documentada.
 - Não afirmar lucratividade sem dados de custo ou margem.
 - Verificar percentuais e médias.
 - Identificar empates e critérios utilizados em caso de empate.
 
 ## 4. Resultado Esperado
 
-Um ranking confiável do desempenho dos produtos, permitindo identificar concentração de vendas, produtos de destaque e oportunidades de investigação.
+Um ranking confiável do desempenho dos produtos, permitindo identificar concentração de vendas, produtos de destaque e oportunidades de investigação sem misturar moedas ou inferir lucratividade sem evidência.
 
 ---
 
