@@ -2,7 +2,9 @@
 
 Esta pasta reúne capturas de tela e registros visuais utilizados para documentar o desenvolvimento do projeto.
 
-## Exemplos de evidências
+## 1. Exemplos de Evidências
+
+### 1.1 Registros visuais
 
 - visualização da base de dados;
 - aplicação de prompts;
@@ -10,7 +12,9 @@ Esta pasta reúne capturas de tela e registros visuais utilizados para documenta
 - tabelas e gráficos utilizados na análise;
 - validações ou comparações relevantes.
 
-## Organização
+## 2. Organização
+
+### 2.1 Nomenclatura
 
 Sempre que possível, utilizar nomes descritivos e numerar as evidências de acordo com a etapa documentada.
 
@@ -24,14 +28,16 @@ Exemplo:
 
 Os nomes acima são apenas exemplos.
 
-## Privacidade
+## 3. Privacidade
 
 Somente imagens adequadas para publicação em repositório público devem ser armazenadas nesta pasta.
 
----
+## 4. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
