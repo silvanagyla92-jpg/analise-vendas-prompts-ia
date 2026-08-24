@@ -1,10 +1,12 @@
 # Prompt 03 — Evolução e Desempenho das Vendas
 
-## Objetivo
+## 1. Objetivo
 
 Analisar a evolução das vendas ao longo do tempo, identificando tendências, períodos de maior e menor desempenho e possíveis mudanças de comportamento.
 
-## Prompt
+## 2. Prompt
+
+### 2.1 Instrução para a IA
 
 ```text
 Atue como um analista de dados especializado em séries temporais e desempenho comercial.
@@ -43,7 +45,9 @@ Finalize com:
 - 3 perguntas para aprofundamento.
 ```
 
-## Critérios de validação
+## 3. Critérios de Validação
+
+### 3.1 Verificações
 
 - Conferir o período analisado.
 - Verificar se períodos incompletos foram tratados corretamente.
@@ -51,14 +55,16 @@ Finalize com:
 - Não confundir variação temporal com causalidade.
 - Confirmar se comparações entre períodos possuem a mesma granularidade.
 
-## Resultado esperado
+## 4. Resultado Esperado
 
 Uma leitura temporal das vendas que permita reconhecer tendências e pontos de atenção sem extrapolar conclusões além das evidências disponíveis.
 
----
+## 5. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
