@@ -1,3 +1,27 @@
 # Planilhas
 
-Coloque nesta pasta as planilhas utilizadas nas análises de vendas.
+Esta pasta é destinada às planilhas utilizadas na análise de vendas.
+
+## Organização
+
+Os arquivos devem ser mantidos com nomes claros e, sempre que possível, indicar sua finalidade ou período.
+
+Exemplos:
+
+- `base_vendas.xlsx`
+- `vendas_tratadas.xlsx`
+- `dados_consolidados.xlsx`
+
+Os nomes acima são apenas exemplos e não representam arquivos que já tenham sido analisados.
+
+## Boas práticas
+
+- preservar uma cópia da base original;
+- separar dados originais de dados tratados;
+- evitar alterações silenciosas na base;
+- registrar transformações relevantes;
+- não publicar informações pessoais ou confidenciais.
+
+## Status atual
+
+As planilhas efetivamente utilizadas no projeto serão adicionadas ou identificadas nesta pasta quando estiverem disponíveis para o processo de análise.
