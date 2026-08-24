@@ -55,12 +55,10 @@ Finalize com até 5 perguntas de investigação que poderiam aprofundar a análi
 
 Uma visão inicial e verificável do conjunto de dados, servindo como ponto de partida para as análises específicas de produtos, vendas, clientes, regiões e insights estratégicos.
 
-## 5. Contato
-
-**Autor:** Nágyla Silva
+---
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
+**Autora:** Nágyla Silva
 
-**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
+Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
