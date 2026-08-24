@@ -130,9 +130,11 @@ Projeto desenvolvido para fins educacionais e de portfólio, demonstrando compet
 
 ## 12. Contato
 
-**Autor:** Nágyla Silva
+**Autora:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
+
+**Desafio:** DIO — análise de relatórios de vendas com ferramentas de Inteligência Artificial
 
 **GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
