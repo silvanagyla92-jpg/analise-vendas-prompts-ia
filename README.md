@@ -77,14 +77,13 @@ analise-vendas-prompts-ia/
 
 Os dados utilizados neste projeto foram disponibilizados pela **Digital Innovation One (DIO)** no laboratório **[Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)**, integrante da trilha **Criando Prompts Inteligentes**.
 
-A base de dados utilizada no exercício é o **[dataset-gamesshop](https://github.com/digitalinnovationone/dataset-gamesshop)**, disponibilizado pela DIO para apoiar a realização da atividade.
+A base **dataset-gamesshop** contém dados estruturados de vendas utilizados no exercício para explorar informações comerciais, como registros de vendas e atributos relacionados aos produtos. Esses dados constituem a base para a aplicação dos prompts, análise dos registros, identificação de padrões e geração de insights.
 
-Neste projeto, a base é utilizada para realizar a análise de vendas, desenvolver e aplicar prompts, validar as respostas geradas por Inteligência Artificial e documentar os insights obtidos.
+Neste projeto, os dados são analisados de forma estruturada, com registro dos prompts utilizados, validação das respostas geradas por IA e documentação dos resultados obtidos.
 
-### 5.1 Referência do desafio
+### 5.1 Referência
 
-- [Laboratório DIO — Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)
-- [Dataset GameShop — Digital Innovation One](https://github.com/digitalinnovationone/dataset-gamesshop)
+- [Digital Innovation One (DIO) — Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)
 
 ## 6. Status Atual
 
@@ -125,10 +124,9 @@ Projeto desenvolvido para fins educacionais e de portfólio, demonstrando compet
 
 ## 11. Referência
 
-### 11.1 Base disponibilizada para o desafio
+### 11.1 Base utilizada no desafio
 
-- [Laboratório DIO — Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)
-- [Dataset GameShop — Digital Innovation One](https://github.com/digitalinnovationone/dataset-gamesshop)
+- [Digital Innovation One (DIO) — Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)
 
 ## 12. Contato
 
