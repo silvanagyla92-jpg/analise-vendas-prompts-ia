@@ -2,7 +2,7 @@
 
 ## 1. Objetivo
 
-Identificar quais produtos apresentam melhor e pior desempenho e compreender sua contribuição para vendas e faturamento.
+Identificar produtos com maior e menor desempenho e compreender sua contribuição para o volume de vendas e para o valor comercial das transações.
 
 ## 2. Prompt
 
@@ -11,55 +11,68 @@ Identificar quais produtos apresentam melhor e pior desempenho e compreender sua
 ```text
 Atue como um analista de dados especializado em desempenho de produtos.
 
-Analise os produtos presentes na base de vendas fornecida.
+Analise exclusivamente os produtos presentes na base fornecida.
 
-Primeiro, identifique quais campos podem ser usados para medir:
-- quantidade vendida;
-- número de transações;
-- receita/faturamento;
-- preço médio ou valor médio da venda;
-- categoria, marca ou outro agrupamento disponível.
+Antes dos rankings:
 
-Verifique também se existem múltiplas moedas. Se houver, mantenha os valores monetários separados por moeda ou aplique somente uma conversão explicitamente documentada.
+1. Identifique o campo que representa o produto.
+2. Identifique os campos disponíveis para quantidade, transações e valores monetários.
+3. Verifique se existem categorias, marcas ou outros agrupamentos.
+4. Identifique as moedas existentes.
+5. Verifique valores ausentes, duplicidades e registros que possam distorcer os rankings.
 
-Depois, determine, quando os dados permitirem:
+Depois, calcule, somente quando houver dados suficientes:
+
 1. Os 10 produtos com maior quantidade vendida.
-2. Os 10 produtos com maior faturamento, respeitando a moeda.
-3. Os 10 produtos com menor desempenho, definindo previamente a métrica utilizada.
-4. A participação percentual dos principais produtos dentro de cada universo monetário comparável.
-5. Produtos que vendem muito, mas geram menor receita relativa.
-6. Produtos que vendem menos, mas apresentam maior valor médio.
-7. Categorias ou grupos com desempenho acima ou abaixo da média.
+2. Os 10 produtos com maior valor de vendas, mantendo cada moeda separada.
+3. Os produtos com menor desempenho, informando claramente a métrica utilizada.
+4. A participação percentual dos principais produtos no volume de unidades vendidas.
+5. A participação percentual no valor das vendas, separada por moeda.
+6. Produtos com alto volume de unidades e menor valor médio por unidade.
+7. Produtos com menor volume de unidades e maior valor médio por unidade.
+8. Desempenho por categoria, marca ou agrupamento disponível.
 
-Não presuma que alta quantidade vendida significa maior rentabilidade, pois margem de lucro pode não estar disponível.
+Para cada ranking, informe:
+- métrica utilizada;
+- período analisado;
+- moeda, quando aplicável;
+- critério de ordenação;
+- tratamento de empates, quando houver.
 
-Não some valores de moedas diferentes sem conversão documentada.
+IMPORTANTE:
+- Não some valores de moedas diferentes.
+- Não trate preço ou faturamento como lucro.
+- Não afirme que um produto é mais rentável sem dados de custo ou margem.
+- Não atribua causa ao desempenho de um produto sem evidência.
+- Não invente categorias ou características que não existam na base.
 
-Apresente os resultados em tabelas e informe a métrica utilizada em cada ranking.
+Para cada achado relevante, apresente:
 
-Para cada achado relevante, explique:
-- o que os dados mostram;
-- qual comparação foi realizada;
-- qual interpretação é possível;
-- qual interpretação NÃO pode ser feita sem informações adicionais.
+- Evidência: cálculo ou dado que sustenta o achado;
+- Interpretação: o que o resultado permite concluir;
+- Limitação: o que não pode ser concluído com os dados disponíveis;
+- Confiança: alta, média ou baixa.
 
-Finalize indicando quais produtos ou categorias merecem investigação comercial e por quê.
+Finalize indicando quais produtos ou grupos merecem investigação comercial e explique a justificativa baseada nos dados.
 ```
 
 ## 3. Critérios de Validação
 
 ### 3.1 Verificações
 
-- Confirmar os rankings diretamente na base.
-- Conferir se quantidade e faturamento não foram tratados como a mesma métrica.
-- Verificar se valores monetários foram comparados dentro da mesma moeda ou após conversão documentada.
-- Não afirmar lucratividade sem dados de custo ou margem.
-- Verificar percentuais e médias.
-- Identificar empates e critérios utilizados em caso de empate.
+- Reproduzir os rankings diretamente a partir da base.
+- Conferir quantidade, transações e valores separadamente.
+- Verificar se os valores monetários foram comparados somente dentro da mesma moeda.
+- Conferir percentuais, médias e participações.
+- Confirmar o período utilizado.
+- Identificar e documentar empates.
+- Não aceitar afirmações de lucratividade sem dados de custo ou margem.
+- Verificar se nenhuma característica de produto foi inferida sem evidência.
+- Registrar limitações relevantes.
 
 ## 4. Resultado Esperado
 
-Um ranking confiável do desempenho dos produtos, permitindo identificar concentração de vendas, produtos de destaque e oportunidades de investigação sem misturar moedas ou inferir lucratividade sem evidência.
+Um diagnóstico verificável do desempenho dos produtos, destacando volume, valor das vendas e padrões relevantes sem misturar moedas ou transformar indicadores de vendas em conclusões sobre lucratividade.
 
 ---
 
