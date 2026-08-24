@@ -1,15 +1,15 @@
 # Análise de Clientes
 
-## 1. Status
+## 1. Objetivo
 
-Arquivo reservado para a análise do comportamento e desempenho dos clientes.
+Registrar a análise do comportamento e desempenho dos compradores a partir dos identificadores disponíveis na base, preservando a privacidade dos dados pessoais.
 
 ## 2. Estrutura Prevista
 
 ### 2.1 Conteúdo da análise
 
 - dados utilizados;
-- identificador de cliente utilizado;
+- identificador de análise utilizado, sem exposição de nomes;
 - prompt aplicado;
 - métricas de frequência e valor;
 - recorrência e concentração;
@@ -20,7 +20,9 @@ Arquivo reservado para a análise do comportamento e desempenho dos clientes.
 
 ## 3. Critério de Preenchimento
 
-Os resultados serão registrados somente após a análise e validação da base efetivamente utilizada. Critérios como recorrência ou inatividade deverão ser definidos antes de qualquer classificação.
+Os resultados serão registrados somente após a análise e validação da base selecionada. Critérios como recorrência ou inatividade deverão ser definidos antes de qualquer classificação.
+
+Nomes e datas de nascimento dos compradores não serão publicados nos resultados. A análise deverá utilizar agregações ou identificadores anonimizados sempre que possível.
 
 ---
 
