@@ -1,32 +1,42 @@
 # Planilhas
 
-Esta pasta é destinada às planilhas utilizadas na análise de vendas.
+Esta pasta reúne os arquivos de dados utilizados no projeto de análise de vendas.
 
-## 1. Organização
+## 1. Arquivos Disponíveis
 
-### 1.1 Nomenclatura dos arquivos
+### 1.1 Base principal
 
-Os arquivos devem ser mantidos com nomes claros e, sempre que possível, indicar sua finalidade ou período.
+- `Meganium_Sales_Data.csv`
 
-Exemplos:
+### 1.2 Bases por canal
 
-- `base_vendas.xlsx`
-- `vendas_tratadas.xlsx`
-- `dados_consolidados.xlsx`
+- `Meganium_Sales_Data_-_AliExpress.csv`
+- `Meganium_Sales_Data_-_Etsy.csv`
+- `Meganium_Sales_Data_-_Shopee.csv`
 
-Os nomes acima são apenas exemplos e não representam arquivos que já tenham sido analisados.
+### 1.3 Base derivada
 
-## 2. Boas Práticas
+- `Updated_Anbernic_Sales_Data.csv`
 
-- preservar uma cópia da base original;
-- separar dados originais de dados tratados;
-- evitar alterações silenciosas na base;
-- registrar transformações relevantes;
-- não publicar informações pessoais ou confidenciais.
+A base derivada possui registros correspondentes à base principal por `invoice_id`, com alterações nos nomes dos produtos. Ela deve ser tratada como versão derivada e não como uma fonte adicional para soma dos resultados.
 
-## 3. Status Atual
+## 2. Critérios para Uso
 
-As planilhas efetivamente utilizadas no projeto serão adicionadas ou identificadas nesta pasta quando estiverem disponíveis para o processo de análise.
+Antes da análise consolidada:
+
+1. verificar a estrutura e os tipos de dados;
+2. conferir duplicidades por `invoice_id`;
+3. identificar sobreposição entre as bases;
+4. verificar moedas e unidades monetárias;
+5. conferir a consistência entre quantidade, preço unitário e preço total;
+6. definir qual base será utilizada como referência principal;
+7. documentar qualquer transformação realizada.
+
+## 3. Cuidados com os Dados
+
+Os arquivos contêm campos de identificação e informações pessoais dos compradores. Esses dados devem ser utilizados somente quando necessários à análise e não devem ser reproduzidos nos resultados, gráficos ou exemplos públicos.
+
+Como existem registros em diferentes moedas, valores monetários de moedas distintas não devem ser agregados diretamente sem conversão documentada.
 
 ---
 
