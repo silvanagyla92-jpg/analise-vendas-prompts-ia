@@ -1,10 +1,10 @@
-# 📊 Análise de Vendas com Prompts e Inteligência Artificial
+# Análise de Vendas com Prompts e Inteligência Artificial
 
 Projeto desenvolvido por **Nágyla Silva** para demonstrar a aplicação prática de **prompts e ferramentas de Inteligência Artificial na análise de relatórios de vendas**, com foco na identificação de padrões, geração de insights e apoio à tomada de decisão.
 
 > **Desafio:** DIO — análise de relatórios de vendas com ferramentas de Inteligência Artificial.
 
-## 🎯 Objetivo
+## 1. Objetivo
 
 Explorar dados de vendas utilizando prompts estruturados para:
 
@@ -15,7 +15,9 @@ Explorar dados de vendas utilizando prompts estruturados para:
 - transformar resultados em recomendações estratégicas;
 - documentar todo o processo de forma clara e reproduzível.
 
-## 🧠 Competências demonstradas
+## 2. Competências Demonstradas
+
+### 2.1 Competências técnicas
 
 - Engenharia de Prompt;
 - Inteligência Artificial generativa;
@@ -26,7 +28,7 @@ Explorar dados de vendas utilizando prompts estruturados para:
 - Organização de projetos no GitHub;
 - Pensamento crítico sobre respostas geradas por IA.
 
-## 🔎 Metodologia
+## 3. Metodologia
 
 O projeto segue o fluxo:
 
@@ -34,7 +36,7 @@ O projeto segue o fluxo:
 
 A IA é utilizada como ferramenta de apoio. As respostas geradas não são tratadas automaticamente como fatos: os resultados relevantes devem ser confrontados com os dados utilizados.
 
-## 📁 Estrutura do projeto
+## 4. Estrutura do Projeto
 
 ```text
 analise-vendas-prompts-ia/
@@ -71,25 +73,25 @@ analise-vendas-prompts-ia/
     └── metodologia.md
 ```
 
-## 🗂️ Fonte dos dados
+## 5. Fonte dos Dados
 
 O desafio disponibiliza o repositório **dataset-gamesshop**, da Digital Innovation One (DIO), como recurso para o exercício. Este repositório é um **projeto independente**, sem fork do repositório original.
 
 A fonte dos dados será identificada de forma transparente na documentação. A autoria deste projeto está relacionada à organização, elaboração dos prompts, análise, validação, interpretação e documentação dos resultados.
 
-## 📌 Status atual
+## 6. Status Atual
 
 A estrutura documental, a metodologia e os prompts do projeto já estão organizados. A base de dados efetivamente utilizada e as evidências de execução ainda precisam ser incorporadas ao repositório antes da conclusão da análise quantitativa.
 
 Enquanto esses arquivos não forem disponibilizados no projeto, os documentos de análise e resultados permanecem como estruturas preparatórias. Nenhum número, ranking ou insight quantitativo é apresentado como resultado final sem validação da base.
 
-## 📈 Resultados
+## 7. Resultados
 
 Os resultados quantitativos e os insights finais serão registrados após a análise e validação da base efetivamente utilizada.
 
 Para evitar conclusões sem evidência, este README não antecipa números ou resultados que ainda não tenham sido verificados.
 
-## 🧪 Validação
+## 8. Validação
 
 Sempre que possível, cada insight será acompanhado de:
 
@@ -97,7 +99,9 @@ Sempre que possível, cada insight será acompanhado de:
 
 Também serão registradas limitações, dados ausentes e situações em que a IA possa apresentar uma interpretação que não seja sustentada pela base.
 
-## 📚 Documentação
+## 9. Documentação
+
+### 9.1 Áreas do projeto
 
 - [Dados](dados/README.md)
 - [Prompts](prompts/README.md)
@@ -106,20 +110,24 @@ Também serão registradas limitações, dados ausentes e situações em que a I
 - [Evidências](evidencias/README.md)
 - [Documentação técnica](docs/README.md)
 
-## 👩‍💻 Autoria
+## 10. Autoria
 
 **Nágyla Silva**
 
 Projeto desenvolvido para fins educacionais e de portfólio, demonstrando competências em Inteligência Artificial, engenharia de prompts, análise de dados e documentação técnica.
 
-## 🔗 Referência
+## 11. Referência
+
+### 11.1 Base disponibilizada para o desafio
 
 - [Dataset GameShop — Digital Innovation One](https://github.com/digitalinnovationone/dataset-gamesshop)
 
----
+## 12. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
