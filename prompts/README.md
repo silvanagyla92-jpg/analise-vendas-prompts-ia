@@ -2,11 +2,13 @@
 
 Esta pasta reúne os prompts utilizados no projeto para orientar ferramentas de Inteligência Artificial na análise de dados de vendas.
 
-## Objetivo
+## 1. Objetivo
 
 Os prompts foram estruturados para transformar perguntas de negócio em análises claras, reproduzíveis e úteis para tomada de decisão.
 
-## Estratégia de elaboração
+## 2. Estratégia de Elaboração
+
+### 2.1 Elementos dos prompts
 
 Cada prompt deve, sempre que possível:
 
@@ -18,7 +20,9 @@ Cada prompt deve, sempre que possível:
 6. Diferenciar fatos observados de interpretações;
 7. Evitar conclusões sem evidência nos dados.
 
-## Organização
+## 3. Organização
+
+### 3.1 Arquivos de prompts
 
 - `01_analise_geral.md` — visão geral do desempenho de vendas;
 - `02_produtos.md` — desempenho e participação dos produtos;
@@ -27,16 +31,18 @@ Cada prompt deve, sempre que possível:
 - `05_regioes.md` — comparação por região, quando essa dimensão estiver disponível;
 - `06_insights_estrategicos.md` — consolidação de oportunidades, riscos e recomendações.
 
-## Validação
+## 4. Validação
 
 As respostas geradas por IA não serão consideradas automaticamente como fatos. Os resultados deverão ser confrontados com os dados da planilha e, quando necessário, recalculados ou revisados.
 
 > **Princípio:** a IA apoia a interpretação dos dados; a evidência deve vir da base analisada.
 
----
+## 5. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
