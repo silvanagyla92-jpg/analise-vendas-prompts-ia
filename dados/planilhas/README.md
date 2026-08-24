@@ -25,3 +25,11 @@ Os nomes acima são apenas exemplos e não representam arquivos que já tenham s
 ## Status atual
 
 As planilhas efetivamente utilizadas no projeto serão adicionadas ou identificadas nesta pasta quando estiverem disponíveis para o processo de análise.
+
+---
+
+**Projeto:** Análise de Vendas com Prompts de IA
+
+**Autora:** Nágyla Silva
+
+Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
