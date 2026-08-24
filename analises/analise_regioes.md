@@ -1,20 +1,21 @@
-# Análise de Regiões
+# Análise por País de Entrega
 
 ## 1. Objetivo
 
-Registrar a análise regional realizada a partir dos dados efetivamente disponíveis, comparando volume de vendas, faturamento, participação e outras métricas que possam ser calculadas.
+Registrar a análise geográfica das vendas utilizando o campo `delivery_country`, comparando volume, participação e outras métricas compatíveis com os dados disponíveis.
 
 ## 2. Estrutura da Análise
 
 ### 2.1 Elementos previstos
 
-Quando a dimensão regional estiver disponível, serão registrados:
+Serão registrados, quando aplicável:
 
 - dados utilizados;
 - prompt aplicado;
 - métricas calculadas;
-- ranking das regiões;
-- comparação com a média;
+- ranking dos países de entrega;
+- comparação de volume e participação;
+- análise por moeda;
 - principais padrões observados;
 - validação dos resultados;
 - limitações e hipóteses;
@@ -22,7 +23,7 @@ Quando a dimensão regional estiver disponível, serão registrados:
 
 ## 3. Critério de Preenchimento
 
-Nenhum resultado quantitativo será preenchido antes da análise e validação da base efetivamente utilizada.
+Nenhum resultado quantitativo será apresentado antes da análise e validação da base selecionada. Valores monetários de moedas diferentes não serão agregados sem uma regra de conversão documentada.
 
 ---
 
