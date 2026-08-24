@@ -17,15 +17,18 @@ Antes da análise:
 - identifique o campo de data utilizado;
 - informe o período coberto pelos dados;
 - verifique se existem datas ausentes, inválidas ou períodos incompletos;
-- explique a granularidade utilizada: dia, semana, mês, trimestre ou ano.
+- explique a granularidade utilizada: dia, semana, mês, trimestre ou ano;
+- identifique as moedas presentes nos dados.
 
 Quando os dados permitirem, calcule e compare:
 - quantidade de vendas por período;
-- faturamento por período;
-- ticket médio por período;
+- faturamento por período, mantendo moedas separadas quando necessário;
+- ticket médio por período, sem misturar moedas;
 - crescimento ou queda percentual entre períodos comparáveis;
 - melhor e pior período;
 - variações relevantes em relação à média.
+
+Não some ou compare diretamente valores monetários de moedas diferentes sem uma regra de conversão documentada.
 
 Procure identificar:
 1. tendências de crescimento ou queda;
@@ -52,12 +55,13 @@ Finalize com:
 - Conferir o período analisado.
 - Verificar se períodos incompletos foram tratados corretamente.
 - Recalcular taxas de crescimento e queda.
+- Confirmar que comparações monetárias respeitam a moeda ou uma conversão documentada.
 - Não confundir variação temporal com causalidade.
 - Confirmar se comparações entre períodos possuem a mesma granularidade.
 
 ## 4. Resultado Esperado
 
-Uma leitura temporal das vendas que permita reconhecer tendências e pontos de atenção sem extrapolar conclusões além das evidências disponíveis.
+Uma leitura temporal das vendas que permita reconhecer tendências e pontos de atenção sem misturar moedas ou extrapolar conclusões além das evidências disponíveis.
 
 ---
 
