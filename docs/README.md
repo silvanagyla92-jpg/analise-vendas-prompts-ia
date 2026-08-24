@@ -2,11 +2,15 @@
 
 Esta pasta reúne a documentação técnica e metodológica do projeto de análise de vendas com apoio de prompts e ferramentas de Inteligência Artificial.
 
-## Conteúdo
+## 1. Conteúdo
+
+### 1.1 Documentos disponíveis
 
 - `metodologia.md` — descreve o processo utilizado para preparar os dados, formular perguntas, elaborar prompts, analisar resultados e validar os insights.
 
-## Metodologia geral
+## 2. Metodologia Geral
+
+### 2.1 Fluxo orientado por evidências
 
 O projeto segue um fluxo orientado por evidências:
 
@@ -22,10 +26,12 @@ O projeto segue um fluxo orientado por evidências:
 
 O objetivo é demonstrar não apenas o resultado final, mas também o processo utilizado para chegar às conclusões.
 
----
+## 3. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
