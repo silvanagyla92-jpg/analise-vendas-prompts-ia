@@ -2,15 +2,15 @@
 
 Este documento registra o método utilizado para desenvolver o projeto de análise de vendas com apoio de prompts e ferramentas de Inteligência Artificial.
 
-## 1. Preparação dos dados
+## 1. Preparação dos Dados
 
 Antes de interpretar os dados, devem ser verificadas a estrutura das planilhas, as colunas disponíveis, os tipos de dados, valores ausentes, duplicidades, período analisado e consistência dos registros.
 
-## 2. Definição das perguntas
+## 2. Definição das Perguntas
 
 As perguntas devem partir de objetivos de negócio, evitando análises genéricas. Exemplos incluem desempenho de vendas, produtos de destaque, evolução temporal, comportamento de clientes e diferenças regionais.
 
-## 3. Engenharia de prompts
+## 3. Engenharia de Prompts
 
 Os prompts devem fornecer contexto suficiente para a ferramenta de IA compreender a tarefa e produzir respostas estruturadas. Sempre que necessário, devem especificar métricas, período, dimensões de análise, formato da resposta e critérios para evitar inferências indevidas.
 
@@ -22,7 +22,7 @@ A ferramenta de Inteligência Artificial será utilizada para interpretar os dad
 
 As respostas geradas serão comparadas com os dados disponíveis. Valores, rankings e conclusões quantitativas devem ser verificáveis. Uma interpretação da IA não será considerada evidência por si só.
 
-## 6. Síntese dos insights
+## 6. Síntese dos Insights
 
 Os resultados validados serão transformados em insights de negócio, priorizando informações que possam contribuir para decisões ou ações.
 
@@ -34,14 +34,18 @@ Quando houver evidência suficiente, os insights poderão originar recomendaçõ
 
 Todo o processo relevante será registrado no GitHub, incluindo dados utilizados, prompts, análises, evidências, resultados e limitações.
 
-## Fluxo resumido
+## 9. Fluxo Resumido
+
+### 9.1 Etapas
 
 **Dados → Pergunta → Prompt → Resposta da IA → Validação → Insight → Recomendação → Documentação**
 
----
+## 10. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
