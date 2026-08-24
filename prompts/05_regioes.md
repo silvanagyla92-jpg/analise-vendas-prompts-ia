@@ -1,10 +1,12 @@
 # Prompt 05 — Análise por Regiões
 
-## Objetivo
+## 1. Objetivo
 
 Avaliar a distribuição geográfica das vendas e identificar diferenças relevantes de desempenho entre regiões.
 
-## Prompt
+## 2. Prompt
+
+### 2.1 Instrução para a IA
 
 ```text
 Atue como um analista de dados especializado em inteligência comercial e análise geográfica.
@@ -50,7 +52,9 @@ Para cada diferença relevante, informe:
 Finalize indicando quais regiões deveriam receber atenção prioritária em uma investigação comercial e quais dados adicionais seriam úteis.
 ```
 
-## Critérios de validação
+## 3. Critérios de Validação
+
+### 3.1 Verificações
 
 - Confirmar a classificação geográfica dos registros.
 - Verificar valores ausentes ou inconsistentes em campos de região.
@@ -58,14 +62,16 @@ Finalize indicando quais regiões deveriam receber atenção prioritária em uma
 - Recalcular participações percentuais e médias.
 - Não transformar correlações geográficas em explicações causais.
 
-## Resultado esperado
+## 4. Resultado Esperado
 
 Um panorama comparativo da performance regional, destacando concentração, diferenças de desempenho e oportunidades de investigação.
 
----
+## 5. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
