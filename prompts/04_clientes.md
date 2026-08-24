@@ -1,10 +1,12 @@
 # Prompt 04 — Análise de Clientes
 
-## Objetivo
+## 1. Objetivo
 
 Investigar o comportamento de compra dos clientes e identificar padrões de recorrência, concentração e valor das compras.
 
-## Prompt
+## 2. Prompt
+
+### 2.1 Instrução para a IA
 
 ```text
 Atue como um analista de dados especializado em comportamento de clientes e vendas.
@@ -46,7 +48,9 @@ Para cada insight, informe:
 Finalize com recomendações de investigação comercial baseadas nos padrões observados, sem afirmar causalidade quando ela não puder ser demonstrada.
 ```
 
-## Critérios de validação
+## 3. Critérios de Validação
+
+### 3.1 Verificações
 
 - Confirmar se o identificador de cliente é adequado.
 - Verificar duplicidades e registros inconsistentes.
@@ -54,14 +58,16 @@ Finalize com recomendações de investigação comercial baseadas nos padrões o
 - Definir explicitamente qualquer critério de recorrência ou inatividade.
 - Evitar conclusões sobre comportamento que não possa ser observado nos dados.
 
-## Resultado esperado
+## 4. Resultado Esperado
 
 Uma visão estruturada do comportamento dos clientes, com foco em frequência, valor, recorrência e concentração das vendas.
 
----
+## 5. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
