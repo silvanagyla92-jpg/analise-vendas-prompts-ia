@@ -10,7 +10,7 @@ Explorar dados de vendas utilizando prompts estruturados para:
 
 - identificar padrões e tendências;
 - analisar o desempenho das vendas;
-- comparar produtos, clientes, períodos e regiões, quando essas dimensões estiverem disponíveis;
+- comparar produtos, clientes, períodos e países de entrega, quando essas dimensões estiverem disponíveis;
 - extrair insights relevantes para o negócio;
 - transformar resultados em recomendações estratégicas;
 - documentar todo o processo de forma clara e reproduzível.
@@ -44,7 +44,12 @@ analise-vendas-prompts-ia/
 ├── dados/
 │   ├── README.md
 │   └── planilhas/
-│       └── README.md
+│       ├── README.md
+│       ├── Meganium_Sales_Data.csv
+│       ├── Meganium_Sales_Data_-_AliExpress.csv
+│       ├── Meganium_Sales_Data_-_Etsy.csv
+│       ├── Meganium_Sales_Data_-_Shopee.csv
+│       └── Updated_Anbernic_Sales_Data.csv
 ├── prompts/
 │   ├── README.md
 │   ├── 01_analise_geral.md
@@ -87,15 +92,15 @@ Neste projeto, os dados são utilizados para aplicar prompts, realizar análises
 
 ## 6. Status Atual
 
-A estrutura documental, a metodologia e os prompts do projeto já estão organizados. A base de dados efetivamente utilizada e as evidências de execução ainda precisam ser incorporadas ao repositório antes da conclusão da análise quantitativa.
+A estrutura documental, a metodologia, os prompts e as bases de dados já estão organizados no repositório. A etapa pendente é a execução e documentação da análise quantitativa sobre as bases selecionadas, com registro das métricas, validações, evidências e insights.
 
-Enquanto esses arquivos não forem disponibilizados no projeto, os documentos de análise e resultados permanecem como estruturas preparatórias. Nenhum número, ranking ou insight quantitativo é apresentado como resultado final sem validação da base.
+A base principal e os arquivos complementares devem ser avaliados quanto a duplicidades e sobreposição antes da consolidação dos resultados. Nenhum número, ranking ou insight quantitativo será apresentado como resultado final sem validação da base utilizada.
 
 ## 7. Resultados
 
-Os resultados quantitativos e os insights finais serão registrados após a análise e validação da base efetivamente utilizada.
+Os resultados quantitativos e os insights finais serão registrados após a análise e validação das bases selecionadas.
 
-Para evitar conclusões sem evidência, este README não antecipa números ou resultados que ainda não tenham sido verificados.
+A documentação dos resultados deverá apresentar as evidências utilizadas, as métricas calculadas, as interpretações e as limitações identificadas.
 
 ## 8. Validação
 
