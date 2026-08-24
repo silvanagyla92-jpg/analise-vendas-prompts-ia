@@ -1,10 +1,12 @@
 # Prompt 06 — Insights Estratégicos
 
-## Objetivo
+## 1. Objetivo
 
 Consolidar os resultados das análises anteriores e transformar evidências em insights úteis para tomada de decisão, mantendo separação entre fatos, interpretações e recomendações.
 
-## Prompt
+## 2. Prompt
+
+### 2.1 Instrução para a IA
 
 ```text
 Atue como um analista de negócios responsável por transformar resultados de uma análise de vendas em insights estratégicos.
@@ -52,7 +54,9 @@ Não invente valores para preencher lacunas.
 Finalize com um resumo executivo de até 10 linhas, adequado para apresentação a um gestor.
 ```
 
-## Critérios de validação
+## 3. Critérios de Validação
+
+### 3.1 Verificações
 
 - Cada insight deve possuir uma evidência rastreável.
 - Recomendações devem estar relacionadas aos achados apresentados.
@@ -60,14 +64,16 @@ Finalize com um resumo executivo de até 10 linhas, adequado para apresentação
 - Nenhum número pode ser introduzido sem origem nos dados ou análises.
 - Deve existir coerência entre os resultados específicos e a síntese final.
 
-## Resultado esperado
+## 4. Resultado Esperado
 
 Uma síntese executiva dos principais achados da análise, acompanhada de recomendações e limitações, permitindo demonstrar como prompts podem apoiar a interpretação de dados e a tomada de decisão.
 
----
+## 5. Contato
+
+**Autor:** Nágyla Silva
 
 **Projeto:** Análise de Vendas com Prompts de IA
 
-**Autora:** Nágyla Silva
+**GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
-Projeto integrante do portfólio prático em Inteligência Artificial, desenvolvido para demonstrar competências em treinamento e avaliação de sistemas de IA, análise crítica de respostas e anotação de dados, aplicadas às funções de AI Trainer, AI Response Evaluator e Data Annotator, com base em experiência em QA e Auditoria.
+**LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
