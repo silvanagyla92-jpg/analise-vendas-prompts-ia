@@ -28,7 +28,7 @@ Cada prompt deve, sempre que possível:
 - `02_produtos.md` — desempenho e participação dos produtos;
 - `03_vendas.md` — evolução e comportamento das vendas;
 - `04_clientes.md` — análise de clientes e padrões de compra;
-- `05_regioes.md` — comparação por região, quando essa dimensão estiver disponível;
+- `05_regioes.md` — análise por **país de entrega**, utilizando `delivery_country`;
 - `06_insights_estrategicos.md` — consolidação de oportunidades, riscos e recomendações.
 
 ## 4. Validação
