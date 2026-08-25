@@ -2,24 +2,45 @@
 
 ## 1. Status
 
-Arquivo reservado para consolidação dos principais insights derivados das análises.
+**CONSOLIDADO — os insights validados do projeto estão registrados na pasta `resultados/`.**
 
-## 2. Estrutura Prevista
+Este arquivo funciona como referência metodológica e ponte entre a análise estratégica e os resultados finais. Ele não duplica nem substitui o registro quantitativo de `resultados/insights.md` e `resultados/insights_obtidos.md`.
 
-### 2.1 Elementos dos insights
+## 2. Estrutura dos Insights
 
-Cada insight deverá apresentar, quando aplicável:
+Cada insight consolidado deve apresentar, quando aplicável:
 
 1. Evidência;
-2. Interpretação;
-3. Impacto potencial;
-4. Recomendação;
-5. Dados adicionais necessários;
-6. Nível de confiança.
+2. Cálculo;
+3. Interpretação;
+4. Impacto potencial;
+5. Recomendação;
+6. Dados adicionais necessários;
+7. Nível de confiança;
+8. Limitações.
 
-## 3. Critério de Preenchimento
+## 3. Referência dos Resultados
 
-Os insights serão consolidados somente após a análise e validação dos dados. Nenhuma conclusão quantitativa será apresentada sem evidência rastreável.
+Os principais insights já validados encontram-se em:
+
+- [`../resultados/insights.md`](../resultados/insights.md) — síntese dos insights consolidados;
+- [`../resultados/insights_obtidos.md`](../resultados/insights_obtidos.md) — registro dos insights efetivamente obtidos;
+- [`../resultados/conclusao.md`](../resultados/conclusao.md) — conclusão final do projeto.
+
+## 4. Critérios de Validação
+
+Nenhuma conclusão quantitativa deve ser apresentada sem evidência rastreável. Os resultados devem respeitar a base analítica definitiva de **110 transações únicas e 323 unidades**, sem dupla contagem da `Updated_Anbernic_Sales_Data.csv`.
+
+Também devem ser preservadas:
+
+- a separação entre EUR, GBP e USD;
+- a distinção entre fato, cálculo, interpretação e hipótese;
+- a impossibilidade de inferir lucro ou margem sem custos suficientes;
+- a proteção dos dados pessoais dos compradores.
+
+## 5. Fluxo
+
+**Análise → Validação → Insight → Resultado Consolidado → Recomendação**
 
 ---
 
