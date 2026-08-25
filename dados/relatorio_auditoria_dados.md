@@ -2,7 +2,7 @@
 
 ## 1. Objetivo
 
-Documentar a verificação inicial das bases de vendas antes da consolidação e da geração dos insights do projeto.
+Documentar a verificação das bases de vendas, incluindo a identificação de sobreposições, duplicidades e critérios utilizados para estabelecer a base analítica definitiva do projeto.
 
 ## 2. Bases Auditadas
 
@@ -14,35 +14,54 @@ Foram identificados cinco arquivos na pasta `dados/planilhas/`:
 - `Meganium_Sales_Data_-_Shopee.csv`;
 - `Updated_Anbernic_Sales_Data.csv`.
 
-## 3. Achados Estruturais
+## 3. Auditoria Quantitativa Concluída
 
-### 3.1 Base derivada
+As quatro bases operacionais apresentam:
 
-`Updated_Anbernic_Sales_Data.csv` apresenta correspondência de registros com a base principal por `invoice_id`, além de alterações nos nomes dos produtos e na organização das colunas. Portanto, deve ser tratada como uma versão derivada e não adicionada à base principal.
+- `Meganium_Sales_Data`: 50 registros;
+- AliExpress: 20 registros;
+- Etsy: 20 registros;
+- Shopee: 20 registros.
 
-### 3.2 Bases por canal
+Essas quatro bases totalizam **110 transações operacionais e 323 unidades**.
 
-Os arquivos de AliExpress, Etsy e Shopee devem ser comparados com a base principal antes de qualquer consolidação. A existência de arquivos separados por canal não é suficiente para concluir que são conjuntos independentes.
+A `Updated_Anbernic_Sales_Data.csv` possui **30 registros correspondentes por `invoice_id`** à base geral. Ela representa uma versão derivada dos mesmos pedidos e, portanto, **não deve ser somada novamente**.
 
-### 3.3 Moedas
+A base analítica definitiva é:
 
-As bases possuem registros em diferentes moedas. Valores monetários de moedas distintas não devem ser somados diretamente. A análise financeira deverá preservar a moeda ou utilizar uma taxa de conversão explicitamente documentada.
+> **110 transações únicas — 323 unidades vendidas.**
 
-### 3.4 Dados pessoais
+## 4. Achados
 
-Existem campos relacionados ao comprador, incluindo nome e data de nascimento. Esses campos não devem ser publicados nos resultados. As análises de clientes devem utilizar agregações ou identificadores não identificáveis.
+### 4.1 Base derivada
 
-## 4. Critério para a Análise
+A `Updated_Anbernic_Sales_Data.csv` apresenta correspondência com a base principal por `invoice_id`, além de alterações nos nomes dos produtos e na organização das colunas. Foi classificada como versão derivada.
 
-Antes da geração dos resultados finais, será definida uma base analítica sem dupla contagem. A escolha deverá considerar a cobertura dos dados, a sobreposição entre arquivos e a finalidade de cada base.
+### 4.2 Bases por canal
 
-## 5. Próxima Verificação
+AliExpress, Etsy e Shopee foram consideradas bases operacionais do conjunto consolidado. A consolidação considera a sobreposição identificada e evita dupla contagem.
 
-A próxima etapa é comparar quantitativamente os cinco arquivos por `invoice_id`, data, produto, canal e demais campos relevantes para determinar quais registros são complementares e quais representam versões ou duplicações.
+### 4.3 Moedas
 
-## 6. Conclusão Preliminar
+As bases possuem registros em diferentes moedas. **EUR, GBP e USD permanecem separados**. Não foi aplicada conversão cambial.
 
-As bases estão disponíveis e são adequadas para prosseguir com a auditoria quantitativa. Entretanto, ainda não é metodologicamente correto consolidar todos os arquivos em um único conjunto nem apresentar um faturamento global antes da verificação de sobreposição e do tratamento das moedas.
+### 4.4 Dados pessoais
+
+Existem campos relacionados ao comprador, incluindo nome e data de nascimento. Esses campos não devem ser publicados nos resultados. Análises de clientes devem utilizar agregações ou identificadores não identificáveis.
+
+### 4.5 Consistência
+
+A validação considera, quando aplicável, `invoice_id`, data, produto, canal, quantidade, preço unitário, preço total, moeda e sobreposição entre arquivos.
+
+## 5. Critério da Base Analítica
+
+A base definitiva foi estabelecida evitando a dupla contagem da `Updated_Anbernic_Sales_Data.csv`. Os resultados consolidados devem utilizar exclusivamente as **110 transações únicas e 323 unidades**.
+
+## 6. Conclusão
+
+**Auditoria quantitativa de sobreposição e deduplicação: CONCLUÍDA.**
+
+A definição da base analítica definitiva encerrou a principal pendência de integridade identificada na verificação inicial. Os resultados devem preservar a separação das moedas e não devem inferir lucro ou margem sem dados de custos suficientes.
 
 ---
 
