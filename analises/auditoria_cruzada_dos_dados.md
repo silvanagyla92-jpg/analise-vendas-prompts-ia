@@ -2,31 +2,88 @@
 
 ## 1. Objetivo
 
-Esta auditoria verifica a consistência estrutural e a relação entre as bases de vendas utilizadas no projeto, com foco em duplicidades, correspondência de produtos, integridade dos valores e critérios necessários para a geração de insights por meio de prompts de IA.
+Esta auditoria verifica a consistência estrutural e a relação entre as cinco bases de vendas do projeto, com foco em duplicidades, correspondências, integridade aritmética, sobreposição entre fontes e definição da base analítica final.
 
 ## 2. Bases analisadas
 
-Foram consideradas cinco planilhas:
+| Base | Registros | Papel na consolidação |
+|---|---:|---|
+| `Meganium_Sales_Data` | 50 | Base geral operacional |
+| `Meganium_Sales_Data_-_AliExpress` | 20 | Base específica do canal |
+| `Meganium_Sales_Data_-_Etsy` | 20 | Base específica do canal |
+| `Meganium_Sales_Data_-_Shopee` | 20 | Base específica do canal |
+| `Updated_Anbernic_Sales_Data` | 30 | Representação alternativa de registros da base geral |
 
-1. `Meganium_Sales_Data`
-2. `Meganium_Sales_Data_-_AliExpress`
-3. Base de vendas do Etsy
-4. `Meganium_Sales_Data_-_Shopee`
-5. `Updated_Anbernic_Sales_Data`
+As quatro primeiras bases somam **110 registros operacionais**. A quinta base possui **30 registros**, todos correspondentes a registros da `Meganium_Sales_Data` por `invoice_id` e atributos transacionais compatíveis.
 
-## 3. Relação entre as bases
+## 3. Resultado quantitativo da sobreposição
 
-A primeira base apresenta registros gerais de vendas. As bases 2, 3 e 4 apresentam registros associados a canais específicos: AliExpress, Etsy e Shopee.
+A matriz abaixo registra a sobreposição identificada por `invoice_id`:
 
-A quinta base possui os mesmos registros identificáveis da primeira base, mantendo campos como data, quantidade, preço, moeda, canal, cupom, desconto, comprador, país de entrega e `invoice_id`. A principal alteração observada é a nomenclatura dos produtos, que passa de MEGANIUM para ANBERNIC.
+| Base A | Base B | Registros A | Registros B | `invoice_id` coincidentes | Resultado |
+|---|---|---:|---:|---:|---|
+| `Meganium_Sales_Data` | AliExpress | 50 | 20 | 0 | Independentes |
+| `Meganium_Sales_Data` | Etsy | 50 | 20 | 0 | Independentes |
+| `Meganium_Sales_Data` | Shopee | 50 | 20 | 0 | Independentes |
+| `Meganium_Sales_Data` | `Updated_Anbernic_Sales_Data` | 50 | 30 | **30** | Duplicação/representação alternativa |
+| AliExpress | Etsy | 20 | 20 | 0 | Independentes |
+| AliExpress | Shopee | 20 | 20 | 0 | Independentes |
+| Etsy | Shopee | 20 | 20 | 0 | Independentes |
 
-Dessa forma, a quinta base deve ser tratada como uma versão transformada ou atualizada dos registros da primeira base, e não como uma nova fonte independente de vendas.
+Assim, a soma física das cinco planilhas seria de **140 linhas**, mas a base analítica deduplicada contém **110 transações únicas**. As 30 linhas adicionais da `Updated_Anbernic_Sales_Data` não devem ser contabilizadas novamente.
 
-## 4. Correspondência de produtos e SKUs
+## 4. Unidades vendidas
 
-As bases que possuem a coluna `SKU` apresentam correspondência consistente entre SKU e produto:
+A base geral contém **146 unidades**. As bases específicas acrescentam:
 
-| SKU | Produto |
+- AliExpress: **58 unidades**;
+- Etsy: **55 unidades**;
+- Shopee: **64 unidades**.
+
+Portanto:
+
+**146 + 58 + 55 + 64 = 323 unidades.**
+
+As 30 linhas da `Updated_Anbernic_Sales_Data` são representações alternativas e não acrescentam unidades ao total analítico.
+
+## 5. Canais na base analítica
+
+Após a deduplicação, os 110 registros distribuem-se por canal da seguinte forma:
+
+| Canal | Transações | Unidades |
+|---|---:|---:|
+| Etsy | 42 | 115 |
+| Shopee | 34 | 113 |
+| AliExpress | 34 | 95 |
+| **Total** | **110** | **323** |
+
+Esses valores são adequados para análises de volume. Não representam ranking de faturamento comparável entre moedas.
+
+## 6. Moedas e valores monetários
+
+Foram identificadas EUR, GBP e USD. Na base analítica de 110 registros, os valores nominais de `total_price` totalizam, separadamente:
+
+| Moeda | Total nominal |
+|---|---:|
+| EUR | 10.510 |
+| GBP | 8.670 |
+| USD | 10.430 |
+
+Esses valores **não devem ser somados entre si**. Não foi aplicada conversão cambial porque o projeto não definiu taxa nem data de referência.
+
+## 7. Integridade aritmética
+
+A regra de validação adotada é:
+
+`total_price = quantity × unit_price`
+
+Os registros das quatro bases operacionais analisadas apresentam consistência com essa regra. A `Updated_Anbernic_Sales_Data` também mantém os mesmos valores transacionais dos registros correspondentes, apesar da alteração de nomenclatura dos produtos.
+
+## 8. Correspondência entre produtos e SKUs
+
+As bases com SKU apresentam o seguinte relacionamento:
+
+| SKU | Produto padronizado |
 |---|---|
 | `SKU-35XX01` | NEW MEGANIUM RG35XX |
 | `SKU-40XXV01` | NEW MEGANIUM RG 40XXV |
@@ -34,65 +91,31 @@ As bases que possuem a coluna `SKU` apresentam correspondência consistente entr
 | `SKU-CUBEXX01` | NEW MEGANIUM RG CubeXX |
 | `SKU-353M01` | MEGANIUM RG353M |
 
-A ausência de SKU nas bases 1 e 5 não impede a análise, mas representa uma diferença estrutural que deve ser considerada na consolidação.
+A `Updated_Anbernic_Sales_Data` não possui SKU e utiliza nomes ANBERNIC, mas mantém `invoice_id` e os demais atributos transacionais que permitem sua identificação como representação alternativa da base geral.
 
-## 5. Validação dos valores
+## 9. `discount_value`
 
-Nos registros fornecidos, a relação entre quantidade, preço unitário e preço total apresenta consistência:
+O campo `discount_value` deve permanecer separado de `total_price`. A documentação disponível não permite afirmar se o desconto já está refletido no `total_price` ou se deve ser subtraído dele. Portanto, não é permitido inferir receita líquida, margem ou lucro a partir desses campos isoladamente.
 
-`total_price = quantity × unit_price`
+## 10. Regra de consolidação definitiva
 
-Exemplos observados incluem 2 × 90 = 180, 5 × 100 = 500, 4 × 80 = 320 e 3 × 110 = 330.
+Para os resultados quantitativos do projeto, deve ser utilizada a seguinte regra:
 
-O campo `discount_value` deve ser analisado separadamente. A estrutura disponível não permite concluir, sem documentação adicional, se `total_price` representa valor bruto ou valor após desconto. Portanto, não se deve assumir automaticamente que `total_price - discount_value` corresponde à receita líquida.
+1. considerar as quatro bases operacionais (`Meganium_Sales_Data`, AliExpress, Etsy e Shopee);
+2. usar `invoice_id` como chave prioritária de rastreabilidade;
+3. excluir a `Updated_Anbernic_Sales_Data` da soma de vendas, tratando-a como representação alternativa dos 30 registros correspondentes;
+4. manter EUR, GBP e USD separados;
+5. não calcular lucro ou margem sem custos;
+6. não interpretar `discount_value` como desconto efetivamente abatido sem documentação adicional;
+7. não expor `buyer_name` ou `buyer_birth_date` nos resultados agregados.
 
-## 6. Auditoria de duplicidades
+## 11. Conclusão da auditoria
 
-O campo `invoice_id` é um identificador relevante para cruzamento dos registros. A correspondência entre as bases 1 e 5 demonstra que os mesmos pedidos podem aparecer em duas representações diferentes.
+A auditoria quantitativa fecha a principal questão de integridade do projeto: a base analítica correta contém **110 transações únicas e 323 unidades**, e não 140 transações, porque as 30 linhas da `Updated_Anbernic_Sales_Data` correspondem a registros já presentes na base geral.
 
-Consequentemente, a base 5 não deve ser somada à base 1 sem uma regra explícita de deduplicação.
+A consolidação deve, portanto, usar as quatro bases operacionais como fontes de vendas e manter a quinta base apenas como evidência de correspondência/transformação.
 
-Para futuras consolidações, recomenda-se verificar, em conjunto, `invoice_id`, data, produto, quantidade, preço total e canal.
-
-## 7. Auditoria das moedas
-
-Foram identificadas as moedas EUR, GBP e USD.
-
-Valores de moedas diferentes não devem ser somados diretamente. Uma análise financeira consolidada exige uma taxa de conversão e uma data de referência definidas previamente.
-
-Na ausência dessas informações, recomenda-se apresentar os resultados financeiros separados por moeda.
-
-## 8. Auditoria dos canais
-
-Os canais identificados são:
-
-- Etsy
-- Shopee
-- AliExpress
-
-Essa dimensão permite análises comparativas de vendas, quantidade, produtos, descontos e distribuição geográfica.
-
-Antes de comparar totais entre bases, deve-se verificar se a base geral contém registros dos mesmos canais já representados nas bases específicas.
-
-## 9. Regras para análise com IA
-
-Os prompts utilizados no projeto devem incorporar as seguintes regras:
-
-1. Verificar duplicidades antes de calcular totais consolidados.
-2. Usar `invoice_id` como identificador prioritário no cruzamento.
-3. Não contabilizar duas vezes registros que sejam versões da mesma venda.
-4. Não somar diretamente valores em moedas diferentes.
-5. Não interpretar `discount_value` como receita ou desconto efetivamente aplicado sem confirmar sua definição.
-6. Diferenciar fatos observados, cálculos, inferências e recomendações.
-7. Informar limitações quando os dados não permitirem uma conclusão segura.
-
-## 10. Conclusão
-
-As bases apresentam estrutura adequada para exploração de dados de vendas e geração de insights com prompts de IA. A principal questão de integridade identificada é a relação entre `Meganium_Sales_Data` e `Updated_Anbernic_Sales_Data`, que não devem ser tratadas como conjuntos independentes.
-
-A análise também deve considerar a presença de múltiplas moedas e a diferença estrutural relacionada à coluna `SKU`.
-
-Esses critérios serão utilizados como premissas para as próximas etapas de análise e para a avaliação da qualidade dos insights produzidos pela IA.
+**Status da auditoria:** CONCLUÍDA para a definição da base analítica e das regras de deduplicação.
 
 ## Rodapé
 
