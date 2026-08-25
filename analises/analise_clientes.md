@@ -1,28 +1,41 @@
 # Análise de Clientes
 
-## 1. Objetivo
+## 1. Status
 
-Registrar a análise do comportamento e desempenho dos compradores a partir dos identificadores disponíveis na base, preservando a privacidade dos dados pessoais.
+**ESTRUTURA METODOLÓGICA — análise específica de clientes não registrada como resultado independente.**
 
-## 2. Estrutura Prevista
+Este arquivo documenta o método planejado. Não apresenta uma classificação executada de clientes e não deve ser interpretado como resultado quantitativo.
 
-### 2.1 Conteúdo da análise
+## 2. Objetivo
 
-- dados utilizados;
-- identificador de análise utilizado, sem exposição de nomes;
+Investigar comportamento de compra, frequência, recorrência e concentração, preservando a privacidade dos dados pessoais.
+
+## 3. Estrutura Metodológica
+
+Quando executada, a análise deverá registrar:
+
+- base e período utilizados;
+- identificador de cliente considerado adequado;
 - prompt aplicado;
 - métricas de frequência e valor;
 - recorrência e concentração;
-- principais padrões observados;
 - validação dos resultados;
 - limitações e hipóteses;
 - insights e recomendações.
 
-## 3. Critério de Preenchimento
+## 4. Regras de Privacidade e Validação
 
-Os resultados serão registrados somente após a análise e validação da base selecionada. Critérios como recorrência ou inatividade deverão ser definidos antes de qualquer classificação.
+- Nomes e datas de nascimento não devem ser publicados.
+- Não reconstruir identidades por suposição.
+- Utilizar agregações ou identificadores anonimizados quando possível.
+- Definir critérios objetivos antes de classificar recorrência ou inatividade.
+- Não inferir idade, perfil, preferência ou características pessoais a partir dos dados disponíveis.
+- Não somar moedas diferentes.
+- Não inferir lucratividade sem custos e margem.
 
-Nomes e datas de nascimento dos compradores não serão publicados nos resultados. A análise deverá utilizar agregações ou identificadores anonimizados sempre que possível.
+## 5. Relação com os Resultados Consolidados
+
+A consolidação oficial do projeto possui **110 transações únicas e 323 unidades**. Esses números vêm da auditoria cruzada e não representam uma análise específica de clientes.
 
 ---
 
