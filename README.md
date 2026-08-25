@@ -4,6 +4,8 @@ Projeto desenvolvido por **Nágyla Silva** para demonstrar a aplicação prátic
 
 > **Desafio:** DIO — análise de relatórios de vendas com ferramentas de Inteligência Artificial.
 
+---
+
 ## 1. Objetivo
 
 Explorar dados de vendas utilizando prompts estruturados para:
@@ -15,6 +17,8 @@ Explorar dados de vendas utilizando prompts estruturados para:
 - transformar resultados em recomendações estratégicas;
 - validar criticamente as respostas geradas por IA;
 - documentar todo o processo de forma clara e reproduzível.
+
+---
 
 ## 2. Competências Demonstradas
 
@@ -31,6 +35,8 @@ Explorar dados de vendas utilizando prompts estruturados para:
 - Organização de projetos no GitHub;
 - Pensamento crítico sobre respostas geradas por IA.
 
+---
+
 ## 3. Metodologia
 
 O projeto segue o fluxo:
@@ -38,6 +44,8 @@ O projeto segue o fluxo:
 **Dados → Auditoria → Pergunta de negócio → Prompt → IA → Validação → Insight → Recomendação**
 
 A IA é utilizada como ferramenta de apoio. As respostas geradas não são tratadas automaticamente como fatos: os resultados relevantes devem ser confrontados com os dados utilizados.
+
+---
 
 ## 4. Estrutura do Projeto
 
@@ -88,11 +96,15 @@ analise-vendas-prompts-ia/
     └── metodologia.md
 ```
 
+---
+
 ## 5. Fonte dos Dados
 
 Os dados utilizados neste projeto foram disponibilizados pela **Digital Innovation One (DIO)** no laboratório **Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas**, integrante da trilha **Criando Prompts Inteligentes**.
 
 Neste projeto, os dados são utilizados para aplicar prompts, realizar análises, validar as respostas geradas por Inteligência Artificial e documentar os insights obtidos.
+
+---
 
 ## 6. Auditoria e Base Analítica Definitiva
 
@@ -115,6 +127,8 @@ A base analítica definitiva é, portanto:
 
 As moedas **EUR, GBP e USD** são mantidas separadas. Não foram aplicadas conversões cambiais.
 
+---
+
 ## 7. Status Atual
 
 **Auditoria quantitativa de sobreposição e deduplicação: CONCLUÍDA.**
@@ -123,6 +137,8 @@ A estrutura documental, os prompts, as análises específicas e a consolidação
 
 Os resultados quantitativos consolidados devem utilizar exclusivamente a base de 110 transações únicas.
 
+---
+
 ## 8. Validação
 
 Os insights consolidados são acompanhados, quando aplicável, de:
@@ -130,6 +146,8 @@ Os insights consolidados são acompanhados, quando aplicável, de:
 **Evidência → Cálculo → Interpretação → Impacto potencial → Recomendação**
 
 Também são registradas limitações, dados ausentes e situações em que a IA possa apresentar uma interpretação que não seja sustentada pela base.
+
+---
 
 ## 9. Documentação
 
@@ -140,11 +158,15 @@ Também são registradas limitações, dados ausentes e situações em que a IA 
 - [Evidências](evidencias/README.md)
 - [Documentação técnica](docs/README.md)
 
+---
+
 ## 10. Autoria
 
 **Nágyla Silva**
 
 Projeto desenvolvido para fins educacionais e de portfólio, demonstrando competências em Inteligência Artificial, engenharia de prompts, análise de dados, auditoria, validação crítica e documentação técnica.
+
+---
 
 ## 11. Contato
 
@@ -157,6 +179,8 @@ Projeto desenvolvido para fins educacionais e de portfólio, demonstrando compet
 **GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
 **LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
+
+---
 
 ## 12. Licença
 
