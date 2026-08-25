@@ -4,8 +4,6 @@ Projeto desenvolvido por **Nágyla Silva** para demonstrar a aplicação prátic
 
 > **Desafio:** DIO — análise de relatórios de vendas com ferramentas de Inteligência Artificial.
 
-> **Licença:** documentação, prompts, análises e demais materiais autorais deste portfólio são disponibilizados sob **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**, conforme `LICENSE`. Os dados de terceiros permanecem sujeitos às suas respectivas condições de uso.
-
 ## 1. Objetivo
 
 Explorar dados de vendas utilizando prompts estruturados para:
@@ -141,7 +139,6 @@ Também são registradas limitações, dados ausentes e situações em que a IA 
 - [Resultados](resultados/README.md)
 - [Evidências](evidencias/README.md)
 - [Documentação técnica](docs/README.md)
-- [Licença](LICENSE)
 
 ## 10. Autoria
 
@@ -160,6 +157,30 @@ Projeto desenvolvido para fins educacionais e de portfólio, demonstrando compet
 **GitHub:** [silvanagyla92-jpg](https://github.com/silvanagyla92-jpg)
 
 **LinkedIn:** [Nágyla Silva](https://www.linkedin.com/in/n%C3%A1gyla-silva-215aba35/)
+
+## 12. Licença
+
+Este projeto é disponibilizado sob a licença **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**.
+
+### O que a licença permite
+
+- **Compartilhar:** copiar e redistribuir o material em qualquer meio ou formato;
+- **Atribuir:** utilizar o material desde que a autoria de **Nágyla Silva** seja devidamente reconhecida;
+- **Uso não comercial:** o material pode ser compartilhado para finalidades não comerciais, respeitando as demais condições da licença.
+
+### O que a licença não permite
+
+- **Uso comercial:** não é autorizada a utilização do material para fins comerciais;
+- **Obras derivadas:** não é autorizada a distribuição de versões modificadas, adaptadas, traduzidas ou transformadas do material;
+- **Remoção da atribuição:** não é permitido remover os créditos de autoria ou apresentar o material como criação própria.
+
+### Condições importantes
+
+A licença aplica-se aos **materiais autorais deste projeto**, incluindo, conforme aplicável, documentação, prompts, análises, metodologia e textos produzidos pela autora.
+
+Os **dados, marcas, logotipos, conteúdos da DIO e demais materiais de terceiros** não são automaticamente abrangidos por esta licença e permanecem sujeitos às respectivas condições de uso e direitos de seus titulares.
+
+A licença completa está disponível no arquivo [`LICENSE`](LICENSE).
 
 ---
 
