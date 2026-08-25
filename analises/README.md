@@ -4,8 +4,6 @@ Esta pasta documenta as análises realizadas sobre os dados de vendas e registra
 
 ## 1. Objetivos das Análises
 
-### 1.1 Finalidades
-
 - Identificar padrões de vendas;
 - Comparar desempenho entre produtos, períodos, clientes e países de entrega, quando disponíveis;
 - Encontrar tendências, concentrações e possíveis anomalias;
@@ -15,15 +13,11 @@ Esta pasta documenta as análises realizadas sobre os dados de vendas e registra
 
 ## 2. Fluxo de Análise
 
-### 2.1 Etapas
+**Dados → Auditoria → Pergunta de negócio → Prompt → Resposta da IA → Verificação → Insight → Recomendação**
 
-**Dados → Auditoria → Pergunta de negócio → Prompt → Resposta da IA → Verificação → Insight**
-
-A resposta da ferramenta de IA será tratada como apoio à análise, e não como fonte independente de verdade.
+A resposta da ferramenta de IA é tratada como apoio à análise, e não como fonte independente de verdade.
 
 ## 3. Estrutura dos Registros
-
-### 3.1 Elementos obrigatórios
 
 Cada análise deverá apresentar, quando aplicável:
 
@@ -38,51 +32,53 @@ Cada análise deverá apresentar, quando aplicável:
 
 ## 4. Arquivos
 
-### 4.1 Análises específicas
+### Análises específicas
 
-- `analise_vendas.md` — análise do comportamento geral das vendas;
+- `analise_vendas.md` — comportamento geral das vendas;
 - `analise_produtos.md` — desempenho dos produtos;
 - `analise_clientes.md` — comportamento dos clientes;
-- `analise_regioes.md` — distribuição e desempenho por país de entrega;
-- `insights_estrategicos.md` — síntese das descobertas relevantes;
-- `analise_geral_planilha_1.md` — análise específica da Planilha 1 (`Meganium_Sales_Data`), com escopo e métricas explicitamente delimitados;
-- `analise_planilha_2_aliexpress.md` — análise específica da base do AliExpress;
-- `analise_consolidada.md` — consolidação das bases consideradas após a auditoria, respeitando as regras de deduplicação e separação monetária;
-- `auditoria_cruzada_dos_dados.md` — comparação entre bases, identificação de correspondências, rastreabilidade e prevenção de dupla contagem.
+- `analise_regioes.md` — distribuição por país de entrega;
+- `insights_estrategicos.md` — síntese das descobertas;
+- `analise_geral_planilha_1.md` — análise da base geral;
+- `analise_planilha_2_aliexpress.md` — análise do AliExpress;
+- `analise_consolidada.md` — consolidação da base analítica definitiva;
+- `auditoria_cruzada_dos_dados.md` — matriz quantitativa de sobreposição e deduplicação.
 
 ## 5. Distinção entre as Auditorias
-
-A auditoria do projeto possui duas camadas complementares:
 
 ### 5.1 Auditoria estrutural
 
 `dados/relatorio_auditoria_dados.md`
 
-Verifica a estrutura e a qualidade básica dos registros, incluindo campos, consistência aritmética, valores ausentes, duplicidades e regras gerais de validação.
+Verifica estrutura, consistência aritmética, campos, valores ausentes, duplicidades internas e regras gerais de qualidade.
 
 ### 5.2 Auditoria cruzada
 
 `analises/auditoria_cruzada_dos_dados.md`
 
-Compara as bases entre si para identificar registros correspondentes, sobreposição, uso de `invoice_id` e risco de dupla contagem.
+Compara as cinco bases entre si, identifica sobreposição por `invoice_id` e define a base analítica sem dupla contagem.
 
-Essa distinção evita tratar uma validação individual como se fosse uma auditoria completa de integração entre fontes.
+## 6. Regra de Consolidação Definitiva
 
-## 6. Regras para Consolidação
+A auditoria quantitativa estabeleceu:
 
-Antes de qualquer consolidação:
+- `Meganium_Sales_Data`: 50 registros;
+- AliExpress: 20 registros;
+- Etsy: 20 registros;
+- Shopee: 20 registros;
+- `Updated_Anbernic_Sales_Data`: 30 registros correspondentes à base geral.
 
-1. verificar a sobreposição entre as bases;
-2. priorizar `invoice_id` para rastreabilidade quando disponível;
-3. não somar EUR, GBP e USD diretamente;
-4. não inferir lucro ou margem sem custos;
-5. não interpretar `discount_value` como desconto efetivo sem documentação suficiente;
-6. diferenciar fatos observados de interpretações e hipóteses;
-7. evitar exposição desnecessária de dados pessoais nos resultados.
+Portanto, a base analítica definitiva possui **110 transações únicas e 323 unidades**. A `Updated_Anbernic_Sales_Data` não deve ser somada novamente.
+
+As moedas EUR, GBP e USD permanecem separadas. Não são permitidos cálculos de lucro ou margem sem custos suficientes.
 
 ## 7. Status
 
-As análises e auditorias já documentadas devem ser interpretadas de acordo com o escopo indicado em cada arquivo. O fechamento quantitativo do projeto exige a validação final da sobreposição entre todas as bases e a confirmação da base analítica definitiva sem dupla contagem.
+**Auditoria quantitativa de sobreposição e deduplicação: CONCLUÍDA.**
+
+A principal pendência de integridade identificada no projeto foi encerrada: a referência quantitativa oficial para os resultados consolidados é de **110 transações únicas e 323 unidades**.
+
+As análises específicas continuam válidas dentro do escopo indicado em cada arquivo.
 
 ---
 
