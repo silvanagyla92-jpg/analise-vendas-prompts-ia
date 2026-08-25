@@ -1,29 +1,42 @@
 # Análise por País de Entrega
 
-## 1. Objetivo
+## 1. Status
 
-Registrar a análise geográfica das vendas utilizando o campo `delivery_country`, comparando volume, participação e outras métricas compatíveis com os dados disponíveis.
+**ESTRUTURA METODOLÓGICA — análise específica por país de entrega não registrada como resultado independente.**
 
-## 2. Estrutura da Análise
+A dimensão geográfica utilizada no projeto é `delivery_country`. O termo **país de entrega** é adotado como nomenclatura oficial para evitar a alternância entre "região" e "país".
 
-### 2.1 Elementos previstos
+## 2. Objetivo
 
-Serão registrados, quando aplicável:
+Analisar a distribuição das vendas por país de entrega, comparando volume, unidades e valores comerciais quando os dados permitirem.
 
-- dados utilizados;
+## 3. Estrutura Metodológica
+
+Quando executada, a análise deverá registrar:
+
+- base e período utilizados;
 - prompt aplicado;
-- métricas calculadas;
 - ranking dos países de entrega;
-- comparação de volume e participação;
-- análise por moeda;
-- principais padrões observados;
-- validação dos resultados;
+- volume de transações e unidades;
+- valores por moeda;
+- participação percentual com denominador explícito;
+- validação dos cálculos;
 - limitações e hipóteses;
 - insights e recomendações.
 
-## 3. Critério de Preenchimento
+## 4. Regras de Validação
 
-Nenhum resultado quantitativo será apresentado antes da análise e validação da base selecionada. Valores monetários de moedas diferentes não serão agregados sem uma regra de conversão documentada.
+- Utilizar `delivery_country` como dimensão geográfica.
+- Verificar valores ausentes e grafias inconsistentes.
+- Não somar EUR, GBP e USD.
+- Não converter moedas sem taxa e data de referência documentadas.
+- Não atribuir causas às diferenças entre países sem evidência.
+- Não generalizar características de consumidores a partir de dados agregados de vendas.
+- Diferenciar fato, cálculo, interpretação e hipótese.
+
+## 5. Relação com os Resultados Consolidados
+
+A consolidação oficial do projeto possui **110 transações únicas e 323 unidades**. Esses números vêm da auditoria cruzada e não representam uma análise específica por país de entrega.
 
 ---
 
