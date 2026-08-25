@@ -2,43 +2,43 @@
 
 Este documento registra o método utilizado para desenvolver o projeto de análise de vendas com apoio de prompts e ferramentas de Inteligência Artificial.
 
-## 1. Preparação dos Dados
+## 1. Preparação e Auditoria dos Dados
 
-Antes de interpretar os dados, devem ser verificadas a estrutura das planilhas, as colunas disponíveis, os tipos de dados, valores ausentes, duplicidades, período analisado e consistência dos registros.
+Foram verificadas a estrutura das planilhas, as colunas disponíveis, os tipos de dados, duplicidades, período analisado, moedas e consistência dos registros. A sobreposição entre as bases foi analisada para evitar dupla contagem.
 
 ## 2. Definição das Perguntas
 
-As perguntas devem partir de objetivos de negócio, evitando análises genéricas. Exemplos incluem desempenho de vendas, produtos de destaque, evolução temporal, comportamento de clientes e diferenças regionais.
+As perguntas foram estruturadas a partir de objetivos de negócio, evitando análises genéricas. Foram consideradas dimensões como desempenho de vendas, produtos, evolução temporal, comportamento de clientes, canais e países de entrega.
 
 ## 3. Engenharia de Prompts
 
-Os prompts devem fornecer contexto suficiente para a ferramenta de IA compreender a tarefa e produzir respostas estruturadas. Sempre que necessário, devem especificar métricas, período, dimensões de análise, formato da resposta e critérios para evitar inferências indevidas.
+Os prompts foram estruturados com contexto, objetivo, dados a considerar, métricas, dimensões de análise, formato esperado e critérios para evitar inferências indevidas.
 
 ## 4. Aplicação da IA
 
-A ferramenta de Inteligência Artificial será utilizada para interpretar os dados e auxiliar na identificação de padrões e possíveis insights.
+As ferramentas de Inteligência Artificial foram utilizadas como apoio à interpretação dos dados e à identificação de padrões e possíveis insights. A resposta da IA não foi considerada evidência por si só.
 
 ## 5. Validação
 
-As respostas geradas serão comparadas com os dados disponíveis. Valores, rankings e conclusões quantitativas devem ser verificáveis. Uma interpretação da IA não será considerada evidência por si só.
+As respostas e conclusões quantitativas foram confrontadas com os dados disponíveis. A base analítica definitiva foi estabelecida em **110 transações únicas e 323 unidades**, sem dupla contagem da `Updated_Anbernic_Sales_Data.csv`.
+
+Os valores monetários permaneceram separados por moeda: EUR, GBP e USD. Não foi aplicada conversão cambial.
 
 ## 6. Síntese dos Insights
 
-Os resultados validados serão transformados em insights de negócio, priorizando informações que possam contribuir para decisões ou ações.
+Os resultados validados foram transformados em insights de negócio, distinguindo evidências, cálculos, interpretações, hipóteses e limitações.
 
 ## 7. Recomendações
 
-Quando houver evidência suficiente, os insights poderão originar recomendações. Recomendações serão diferenciadas dos fatos observados e das interpretações.
+Quando houve evidência suficiente, os insights originaram recomendações. As recomendações foram diferenciadas dos fatos observados e das interpretações.
 
 ## 8. Documentação
 
-Todo o processo relevante será registrado no GitHub, incluindo dados utilizados, prompts, análises, evidências, resultados e limitações.
+O processo relevante foi registrado no GitHub, incluindo dados utilizados, prompts, análises, auditoria, evidências, resultados e limitações.
 
-## 9. Fluxo Resumido
+## 9. Fluxo Executado
 
-### 9.1 Etapas
-
-**Dados → Pergunta → Prompt → Resposta da IA → Validação → Insight → Recomendação → Documentação**
+**Dados → Auditoria → Pergunta → Prompt → Resposta da IA → Validação → Insight → Recomendação → Documentação**
 
 ---
 
