@@ -2,24 +2,37 @@
 
 ## 1. Objetivo
 
-Consolidar os registros fornecidos para o projeto após a auditoria cruzada, preservando a rastreabilidade das bases e evitando dupla contagem.
+Consolidar os registros das bases operacionais após a auditoria cruzada, preservando rastreabilidade, deduplicação e separação monetária.
 
-## 2. Bases consideradas
+## 2. Base analítica definitiva
 
-Foram analisadas quatro bases operacionais:
+A auditoria cruzada identificou cinco planilhas no repositório, mas apenas quatro devem participar da soma das vendas:
 
-1. `Meganium_Sales_Data`
-2. `Meganium_Sales_Data_-_AliExpress`
-3. Base de vendas do Etsy
-4. `Meganium_Sales_Data_-_Shopee`
+1. `Meganium_Sales_Data` — 50 registros;
+2. `Meganium_Sales_Data_-_AliExpress` — 20 registros;
+3. `Meganium_Sales_Data_-_Etsy` — 20 registros;
+4. `Meganium_Sales_Data_-_Shopee` — 20 registros.
 
-A base `Updated_Anbernic_Sales_Data` não deve ser somada à base principal, pois os registros fornecidos demonstram correspondência com ela.
+A `Updated_Anbernic_Sales_Data` possui 30 registros correspondentes por `invoice_id` a registros da base geral e deve ser tratada como representação alternativa, não como fonte independente.
 
-## 3. Escopo dos dados enviados
+### Resultado da deduplicação
 
-Nos registros efetivamente fornecidos para esta etapa, foram analisadas **110 linhas**, correspondentes a **323 unidades vendidas**.
+- Registros nas quatro bases operacionais: **110**;
+- Registros adicionais da base alternativa: **30**;
+- Registros físicos se todas as planilhas fossem somadas: **140**;
+- **Transações únicas na base analítica: 110**;
+- **Unidades vendidas: 323**.
 
-Esses números representam somente os registros apresentados nesta etapa da conversa e não devem ser interpretados como o total de toda a base original caso existam outras linhas nos arquivos completos.
+## 3. Distribuição por canal
+
+| Canal | Transações | Unidades |
+|---|---:|---:|
+| Etsy | 42 | 115 |
+| Shopee | 34 | 113 |
+| AliExpress | 34 | 95 |
+| **Total** | **110** | **323** |
+
+O Etsy concentra o maior volume de transações e unidades na base analítica. Isso é uma conclusão de **volume**, não de rentabilidade.
 
 ## 4. Produtos
 
@@ -31,51 +44,89 @@ Foram identificados cinco modelos:
 4. NEW MEGANIUM RG CubeXX
 5. MEGANIUM RG353M
 
-Nas bases com SKU, os códigos permitem relacionar os produtos de maneira padronizada.
+As bases com SKU permitem padronização adicional dos produtos.
 
-## 5. Canais
+## 5. Período observado
 
-Os registros abrangem:
+Os registros da base analítica abrangem o período de **20/05/2024 a 10/11/2024**.
 
-1. Etsy
-2. Shopee
-3. AliExpress
+Novembro contém somente registros até 10/11/2024 e, portanto, é um período parcial.
 
-A separação por canal permite análises específicas de volume, produtos, descontos e distribuição geográfica.
+## 6. Moedas
 
-## 6. Período observado
+Foram identificadas três moedas:
 
-Nos dados fornecidos, as datas variam de **20/05/2024 a 10/11/2024**.
+- EUR;
+- GBP;
+- USD.
 
-## 7. Moedas
+Os valores nominais de `total_price` da base analítica são:
 
-Foram identificadas:
+| Moeda | Total nominal |
+|---|---:|
+| EUR | 10.510 |
+| GBP | 8.670 |
+| USD | 10.430 |
 
-1. EUR
-2. GBP
-3. USD
+**Não existe um total financeiro único em moeda comum neste projeto.** Somar EUR, GBP e USD diretamente produziria um indicador sem significado financeiro válido. Uma consolidação monetária exige taxa de câmbio e data de referência documentadas.
 
-Os valores financeiros não foram convertidos entre moedas. Portanto, não é metodologicamente correto apresentar um único total monetário somando diretamente EUR, GBP e USD.
+## 7. Integridade dos valores
 
-## 8. Integridade dos valores
+A regra de consistência adotada é:
 
-Nos registros apresentados, `total_price` é consistente com `quantity × unit_price`.
+`total_price = quantity × unit_price`
 
-O campo `discount_value` foi mantido como uma dimensão separada. Não foi assumido que ele representa necessariamente o desconto efetivamente abatido da receita, pois sua definição operacional não foi fornecida.
+Os registros analisados apresentam consistência com essa relação.
 
-## 9. Duplicidade
+## 8. Descontos
 
-A `invoice_id` deve ser utilizada como identificador prioritário para cruzamentos. A `Updated_Anbernic_Sales_Data` contém registros correspondentes aos da base principal e, por isso, deve ser tratada como representação alternativa dos dados, não como uma quinta fonte independente.
+`discount_value` permanece como campo separado. A documentação disponível não permite afirmar se o valor representa o desconto efetivamente abatido da venda ou outra medida operacional.
 
-## 10. Interpretação
+Por isso, não foram calculados receita líquida, margem ou lucro a partir desse campo.
 
-Os dados permitem explorar desempenho por produto, canal, período, país e moeda. Entretanto, não permitem calcular lucro ou margem, pois não foram fornecidos custos dos produtos.
+## 9. Lucro e margem
 
-Também não é possível comparar receita total entre moedas sem definir uma taxa de câmbio e uma data de referência.
+Não é possível calcular lucro ou margem de forma confiável porque as bases não apresentam custos de aquisição, custos operacionais ou outra estrutura de custo suficiente.
 
-## 11. Conclusão
+## 10. Rastreabilidade e privacidade
 
-A consolidação deve priorizar rastreabilidade, deduplicação e separação monetária. Esses critérios serão utilizados como regras para os prompts e para a interpretação dos insights gerados por IA.
+`invoice_id` é a chave prioritária para rastreabilidade e deduplicação.
+
+Os campos `buyer_name` e `buyer_birth_date` não devem ser reproduzidos em resultados agregados, pois não são necessários para os insights de negócio documentados.
+
+## 11. Principais conclusões
+
+### Fatos observados
+
+- A base analítica possui **110 transações únicas**.
+- Foram registradas **323 unidades**.
+- Existem três canais: Etsy, Shopee e AliExpress.
+- Existem cinco produtos identificáveis.
+- Existem três moedas: EUR, GBP e USD.
+- A `Updated_Anbernic_Sales_Data` contém 30 registros que correspondem à base geral e não devem ser somados novamente.
+
+### Interpretações válidas
+
+- Etsy é o canal de maior volume físico na base consolidada.
+- A análise por valor monetário deve permanecer separada por moeda.
+- A deduplicação é necessária antes de qualquer indicador consolidado.
+
+### Inferências que não devem ser feitas
+
+Os dados não sustentam conclusões sobre:
+
+- canal mais lucrativo;
+- produto mais lucrativo;
+- margem;
+- lucro;
+- efeito causal dos descontos;
+- sazonalidade definitiva.
+
+## 12. Conclusão
+
+A base analítica definitiva do projeto é composta pelas quatro bases operacionais, totalizando **110 transações únicas e 323 unidades**. A quinta planilha deve ser preservada como evidência de transformação/correspondência, mas excluída dos cálculos consolidados para evitar dupla contagem.
+
+Essa definição encerra a principal pendência quantitativa identificada na auditoria e estabelece uma referência única para os prompts, análises e resultados finais do projeto.
 
 ## Rodapé
 
