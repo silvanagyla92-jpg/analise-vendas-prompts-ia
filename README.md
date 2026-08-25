@@ -1,6 +1,6 @@
 # Análise de Vendas com Prompts e Inteligência Artificial
 
-Projeto desenvolvido por **Nágyla Silva** para demonstrar a aplicação prática de **prompts e ferramentas de Inteligência Artificial na análise de relatórios de vendas**, com foco na identificação de padrões, geração de insights, validação de resultados e apoio à tomada de decisão.
+Projeto desenvolvido por **Nágyla Silva** para demonstrar a aplicação prática de **prompts e ferramentas de Inteligência Artificial na análise de relatórios de vendas**, com foco na identificação de padrões, geração de insights, validação crítica e apoio à tomada de decisão.
 
 > **Desafio:** DIO — análise de relatórios de vendas com ferramentas de Inteligência Artificial.
 
@@ -9,12 +9,12 @@ Projeto desenvolvido por **Nágyla Silva** para demonstrar a aplicação prátic
 Explorar dados de vendas utilizando prompts estruturados para:
 
 - identificar padrões e tendências;
-- analisar o desempenho das vendas;
-- comparar produtos, clientes, períodos e países de entrega, quando essas dimensões estiverem disponíveis;
+- analisar desempenho das vendas;
+- comparar produtos, clientes, períodos, canais e países de entrega, quando disponíveis;
 - extrair insights relevantes para o negócio;
 - transformar resultados em recomendações estratégicas;
-- documentar todo o processo de forma clara e reproduzível;
-- validar os resultados gerados por IA antes de considerá-los conclusões.
+- validar criticamente as respostas geradas por IA;
+- documentar todo o processo de forma clara e reproduzível.
 
 ## 2. Competências Demonstradas
 
@@ -23,10 +23,10 @@ Explorar dados de vendas utilizando prompts estruturados para:
 - Engenharia de Prompt;
 - Inteligência Artificial generativa;
 - Análise exploratória de dados;
+- Auditoria e validação de dados;
+- Deduplicação e rastreabilidade;
 - Interpretação de informações de negócio;
 - Geração e validação de insights;
-- Auditoria e validação de dados;
-- Deduplicação e rastreabilidade de registros;
 - Documentação técnica;
 - Organização de projetos no GitHub;
 - Pensamento crítico sobre respostas geradas por IA.
@@ -38,10 +38,6 @@ O projeto segue o fluxo:
 **Dados → Auditoria → Pergunta de negócio → Prompt → IA → Validação → Insight → Recomendação**
 
 A IA é utilizada como ferramenta de apoio. As respostas geradas não são tratadas automaticamente como fatos: os resultados relevantes devem ser confrontados com os dados utilizados.
-
-A consolidação deve ocorrer somente depois da verificação de sobreposição entre as bases. O campo `invoice_id` é utilizado como identificador prioritário para rastreabilidade e deduplicação quando disponível.
-
-Valores monetários em **EUR, GBP e USD** permanecem separados quando não existe uma regra de conversão cambial documentada. Também não são inferidos lucro ou margem sem dados de custo.
 
 ## 4. Estrutura do Projeto
 
@@ -91,60 +87,50 @@ analise-vendas-prompts-ia/
     └── metodologia.md
 ```
 
-### 4.1 Organização das auditorias
-
-A auditoria de dados está dividida em duas camadas complementares:
-
-- `dados/relatorio_auditoria_dados.md` — auditoria estrutural e de qualidade dos registros, incluindo campos, consistência e regras básicas de validação;
-- `analises/auditoria_cruzada_dos_dados.md` — auditoria entre bases, com foco em correspondência de registros, rastreabilidade, sobreposição e prevenção de dupla contagem.
-
-A separação evita confundir a validação individual das bases com a comparação entre fontes.
-
 ## 5. Fonte dos Dados
 
-Os dados utilizados neste projeto foram disponibilizados pela **Digital Innovation One (DIO)** no laboratório **[Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas](https://web.dio.me/lab/como-utilizar-prompts-para-gerar-insights-de-relatorios-de-vendas/learning/efadaa82-8f08-4186-9a42-a8255ba2fb31?back=/track/criando-prompts-inteligentes)**, integrante da trilha **Criando Prompts Inteligentes**.
-
-A base de dados reúne registros estruturados de vendas e informações relacionadas aos produtos, permitindo explorar o desempenho comercial e identificar padrões nos dados.
+Os dados utilizados neste projeto foram disponibilizados pela **Digital Innovation One (DIO)** no laboratório **Como Utilizar Prompts para Gerar Insights de Relatórios de Vendas**, integrante da trilha **Criando Prompts Inteligentes**.
 
 Neste projeto, os dados são utilizados para aplicar prompts, realizar análises, validar as respostas geradas por Inteligência Artificial e documentar os insights obtidos.
 
-## 6. Status Atual
+## 6. Auditoria e Base Analítica Definitiva
 
-A estrutura documental, a metodologia, os prompts, as bases de dados, as análises e os resultados preliminares já estão organizados no repositório.
+A auditoria cruzada considerou as cinco planilhas do repositório.
 
-A auditoria inicial e a análise das bases avaliadas já foram documentadas. A etapa de fechamento consiste em validar quantitativamente a sobreposição entre todas as bases, confirmar a base analítica final sem dupla contagem e revisar os resultados derivados dessa consolidação.
+As quatro bases operacionais possuem:
 
-Até essa validação final, números, rankings e insights consolidados devem ser interpretados dentro do escopo da base explicitamente indicada em cada análise.
+- `Meganium_Sales_Data`: 50 registros;
+- AliExpress: 20 registros;
+- Etsy: 20 registros;
+- Shopee: 20 registros.
 
-## 7. Resultados
+Essas quatro bases totalizam **110 transações operacionais e 323 unidades**.
 
-Os resultados já documentados incluem análises específicas, auditoria cruzada, análise consolidada e insights metodológicos.
+A `Updated_Anbernic_Sales_Data` possui **30 registros correspondentes por `invoice_id`** à base geral. Ela é uma representação alternativa dos mesmos pedidos e, portanto, **não deve ser somada novamente**.
 
-O arquivo `resultados/insights_obtidos.md` registra os principais achados derivados das bases avaliadas, enquanto `resultados/insights.md` e `resultados/conclusao.md` integram os resultados finais destinados à apresentação do projeto.
+A base analítica definitiva é, portanto:
 
-Resultados quantitativos devem permanecer rastreáveis aos dados utilizados e às regras de validação aplicadas.
+> **110 transações únicas — 323 unidades vendidas.**
+
+As moedas **EUR, GBP e USD** são mantidas separadas. Não foram aplicadas conversões cambiais.
+
+## 7. Status Atual
+
+**Auditoria quantitativa de sobreposição e deduplicação: CONCLUÍDA.**
+
+A estrutura documental, os prompts, as análises específicas e a consolidação estão organizados. A definição da base analítica definitiva encerra a principal pendência de integridade identificada na auditoria.
+
+Os resultados quantitativos consolidados devem utilizar exclusivamente a base de 110 transações únicas.
 
 ## 8. Validação
 
 Sempre que possível, cada insight será acompanhado de:
 
-**Evidência → Interpretação → Impacto potencial → Recomendação**
+**Evidência → Cálculo → Interpretação → Impacto potencial → Recomendação**
 
 Também serão registradas limitações, dados ausentes e situações em que a IA possa apresentar uma interpretação que não seja sustentada pela base.
 
-As seguintes regras são obrigatórias para a consolidação:
-
-1. verificar duplicidades e sobreposições antes de somar bases;
-2. priorizar `invoice_id` para rastreabilidade quando disponível;
-3. não somar diretamente EUR, GBP e USD;
-4. não inferir lucro ou margem sem custos;
-5. não tratar `discount_value` como desconto efetivo sem documentação da sua semântica;
-6. diferenciar fatos observados de interpretações e hipóteses;
-7. evitar exposição desnecessária de dados pessoais nos resultados e evidências.
-
 ## 9. Documentação
-
-### 9.1 Áreas do projeto
 
 - [Dados](dados/README.md)
 - [Prompts](prompts/README.md)
@@ -157,7 +143,7 @@ As seguintes regras são obrigatórias para a consolidação:
 
 **Nágyla Silva**
 
-Projeto desenvolvido para fins educacionais e de portfólio, demonstrando competências em Inteligência Artificial, engenharia de prompts, análise de dados, auditoria, validação de respostas e documentação técnica.
+Projeto desenvolvido para fins educacionais e de portfólio, demonstrando competências em Inteligência Artificial, engenharia de prompts, análise de dados, auditoria, validação crítica e documentação técnica.
 
 ## 11. Contato
 
