@@ -2,24 +2,43 @@
 
 ## 1. Status
 
-Arquivo reservado para a análise consolidada do desempenho das vendas.
+**ESTRUTURA METODOLÓGICA — análise temporal específica não registrada como resultado independente.**
 
-## 2. Estrutura Prevista
+Os resultados consolidados do projeto não devem ser atribuídos a este arquivo como se fossem uma análise temporal específica executada. Os achados temporais existentes em outros documentos permanecem válidos somente dentro do escopo e da base explicitamente indicados.
 
-### 2.1 Conteúdo da análise
+## 2. Escopo previsto
 
-- dados utilizados;
+Esta análise foi planejada para avaliar a evolução das vendas ao longo do tempo, identificando variações, períodos de maior e menor volume e possíveis pontos de atenção.
+
+## 3. Estrutura Metodológica
+
+Quando executada, deverá registrar:
+
+- base e período utilizados;
 - prompt aplicado;
-- métricas calculadas;
-- evolução temporal;
-- principais padrões observados;
-- validação dos resultados;
+- data inicial e final;
+- granularidade temporal;
+- transações e unidades por período;
+- valores por moeda;
+- variações entre períodos comparáveis;
+- tratamento de períodos incompletos;
+- validação dos cálculos;
 - limitações e hipóteses;
 - insights e recomendações.
 
-## 3. Critério de Preenchimento
+## 4. Regras de Validação
 
-Os resultados serão registrados somente após a análise e validação da base efetivamente utilizada. Nenhum valor quantitativo será apresentado sem evidência rastreável.
+- Comparar períodos de duração compatível sempre que possível.
+- Sinalizar períodos incompletos.
+- Não somar moedas diferentes.
+- Não confundir quantidade com faturamento.
+- Não confundir faturamento com lucro.
+- Não atribuir causalidade sem evidência.
+- Diferenciar fato, cálculo, interpretação e hipótese.
+
+## 5. Relação com os Resultados Consolidados
+
+A consolidação oficial do projeto possui **110 transações únicas e 323 unidades**. Esses números vêm da auditoria cruzada e não devem ser apresentados como resultado exclusivo desta análise temporal.
 
 ---
 
