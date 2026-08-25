@@ -2,25 +2,41 @@
 
 ## 1. Status
 
-Arquivo reservado para a análise do desempenho dos produtos.
+**ESTRUTURA METODOLÓGICA — análise específica de produtos não registrada como resultado independente.**
 
-## 2. Estrutura Prevista
+Os resultados consolidados do projeto não devem ser atribuídos a este arquivo como se fossem uma análise específica executada. Os achados de produtos presentes em outros documentos permanecem válidos apenas dentro do escopo e da base explicitamente indicada nesses documentos.
 
-### 2.1 Conteúdo da análise
+## 2. Escopo previsto
 
-- dados utilizados;
+Esta análise foi planejada para avaliar o desempenho dos produtos utilizando quantidade, transações e valores monetários, sempre mantendo as moedas separadas.
+
+## 3. Estrutura Metodológica
+
+Quando uma análise específica de produtos for executada, deverá registrar:
+
+- base e período utilizados;
 - prompt aplicado;
 - métricas calculadas;
-- rankings por quantidade e faturamento;
-- participação dos produtos no total;
-- principais padrões observados;
-- validação dos resultados;
+- ranking por quantidade;
+- ranking de valor por moeda;
+- participação dos produtos no volume de unidades;
+- participação no valor das vendas, separada por moeda;
+- validação dos cálculos;
 - limitações e hipóteses;
 - insights e recomendações.
 
-## 3. Critério de Preenchimento
+## 4. Regras de Validação
 
-Os resultados serão registrados somente após a análise e validação da base efetivamente utilizada. Não será inferida lucratividade sem dados de custo ou margem.
+- Não somar EUR, GBP e USD.
+- Não tratar vendas como lucro.
+- Não inferir lucratividade sem custos e margem.
+- Confirmar quantidade, transações e valores diretamente na base utilizada.
+- Registrar o período e o critério de ordenação.
+- Diferenciar fato, cálculo, interpretação e hipótese.
+
+## 5. Relação com os Resultados Consolidados
+
+A consolidação oficial do projeto possui **110 transações únicas e 323 unidades**. Esses números vêm da auditoria cruzada e não devem ser apresentados como resultado exclusivo desta análise de produtos.
 
 ---
 
