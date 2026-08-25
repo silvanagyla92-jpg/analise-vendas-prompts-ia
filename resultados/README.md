@@ -1,14 +1,26 @@
 # Resultados
 
-Esta pasta reúne os principais resultados obtidos a partir das análises de dados de vendas, mantendo a distinção entre fatos observados, interpretações, limitações e recomendações.
+Esta pasta reúne os principais resultados obtidos a partir das análises de dados de vendas, mantendo a distinção entre fatos observados, cálculos, interpretações, limitações e recomendações.
 
 ## 1. Objetivo
 
 Consolidar as descobertas de forma objetiva e transformar os resultados analisados em insights que possam apoiar decisões de negócio, sem extrapolar o que os dados permitem concluir.
 
-## 2. Tipos de Resultados
+## 2. Base Analítica Definitiva
 
-### 2.1 Categorias de resultados
+A auditoria cruzada das cinco planilhas estabeleceu a base analítica sem dupla contagem:
+
+- `Meganium_Sales_Data`: 50 registros;
+- AliExpress: 20 registros;
+- Etsy: 20 registros;
+- Shopee: 20 registros;
+- `Updated_Anbernic_Sales_Data`: 30 registros correspondentes por `invoice_id` à base geral.
+
+As quatro bases operacionais totalizam **110 transações únicas e 323 unidades**. A `Updated_Anbernic_Sales_Data` é uma representação alternativa de pedidos já presentes na base geral e, portanto, **não deve ser somada novamente**.
+
+As moedas **EUR, GBP e USD** permanecem separadas. Não foi aplicada conversão cambial.
+
+## 3. Tipos de Resultados
 
 - Principais indicadores de desempenho;
 - Produtos ou categorias de maior destaque;
@@ -19,29 +31,25 @@ Consolidar as descobertas de forma objetiva e transformar os resultados analisad
 - Recomendações estratégicas;
 - Limitações e ressalvas metodológicas.
 
-## 3. Critério de Apresentação
-
-### 3.1 Estrutura dos insights
-
-Cada insight deverá ser apresentado, quando aplicável, com:
-
-**Evidência → Interpretação → Impacto potencial → Recomendação**
-
-Quando um resultado depender de cálculo, o valor deverá ser rastreável aos dados utilizados. Quando for uma interpretação, isso será explicitamente indicado.
-
-Também devem ser informados o escopo da base analisada e as limitações que possam afetar a interpretação.
-
 ## 4. Arquivos
 
 ### 4.1 Resultados consolidados
 
-- `insights.md` — principais insights destinados à apresentação consolidada;
-- `insights_obtidos.md` — registro dos insights efetivamente obtidos durante as análises, incluindo evidências, interpretações e limitações;
-- `conclusao.md` — conclusão geral do projeto.
+- `insights.md` — síntese consolidada dos principais insights validados;
+- `insights_obtidos.md` — registro rastreável dos insights efetivamente obtidos durante as análises;
+- `conclusao.md` — conclusão final do projeto.
 
-O arquivo `insights_obtidos.md` não deve ser interpretado como uma segunda base de resultados independente. Ele funciona como registro complementar e rastreável dos achados.
+O arquivo `insights_obtidos.md` funciona como registro complementar dos achados e não representa uma segunda base de resultados independente.
 
-## 5. Regras de Validação
+## 5. Estrutura dos Insights
+
+Cada insight deve apresentar, quando aplicável:
+
+**Evidência → Cálculo → Interpretação → Impacto potencial → Recomendação → Dados adicionais → Confiança**
+
+Quando um resultado depender de cálculo, o valor deverá ser rastreável aos dados utilizados. Quando for uma interpretação ou hipótese, isso será explicitamente indicado.
+
+## 6. Regras de Validação
 
 Antes de considerar um resultado como consolidado:
 
@@ -50,15 +58,17 @@ Antes de considerar um resultado como consolidado:
 3. `invoice_id` deve ser priorizado para rastreabilidade quando disponível;
 4. EUR, GBP e USD não devem ser somados diretamente sem conversão cambial documentada;
 5. lucro ou margem não devem ser inferidos sem dados de custo;
-6. `discount_value` não deve ser interpretado como desconto efetivo sem documentação da sua semântica;
-7. fatos observados devem ser diferenciados de interpretações e hipóteses;
+6. `discount_value` não deve ser interpretado automaticamente como desconto efetivo sem documentação de sua semântica;
+7. fatos observados devem ser diferenciados de cálculos, interpretações e hipóteses;
 8. dados pessoais não devem ser reproduzidos desnecessariamente nos resultados.
 
-## 6. Status
+## 7. Status
 
-Os resultados específicos e a auditoria metodológica já foram documentados. O fechamento quantitativo do projeto depende da validação final da sobreposição entre todas as bases e da confirmação da base analítica definitiva sem dupla contagem.
+**CONCLUÍDO — auditoria quantitativa, deduplicação e definição da base analítica.**
 
-Enquanto essa etapa não for concluída, resultados consolidados devem ser apresentados com o escopo da base claramente identificado.
+A referência quantitativa oficial para os resultados consolidados é de **110 transações únicas e 323 unidades**.
+
+As análises específicas de produtos, evolução das vendas, clientes e países de entrega somente devem ser apresentadas como resultados executados quando houver evidência quantitativa correspondente. Estruturas metodológicas não devem ser confundidas com análises realizadas.
 
 ---
 
