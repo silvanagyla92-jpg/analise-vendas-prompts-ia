@@ -18,25 +18,33 @@ Esta pasta reúne os arquivos de dados utilizados no projeto de análise de vend
 
 - `Updated_Anbernic_Sales_Data.csv`
 
-A base derivada possui registros correspondentes à base principal por `invoice_id`, com alterações nos nomes dos produtos. Ela deve ser tratada como versão derivada e não como uma fonte adicional para soma dos resultados.
+A base derivada possui registros correspondentes à base principal por `invoice_id`, com alterações nos nomes dos produtos. Ela deve ser tratada como versão derivada e não como fonte adicional para soma dos resultados.
 
-## 2. Critérios para Uso
+## 2. Critérios Aplicados na Auditoria
 
-Antes da análise consolidada:
+A auditoria das planilhas considerou:
 
-1. verificar a estrutura e os tipos de dados;
-2. conferir duplicidades por `invoice_id`;
-3. identificar sobreposição entre as bases;
-4. verificar moedas e unidades monetárias;
-5. conferir a consistência entre quantidade, preço unitário e preço total;
-6. definir qual base será utilizada como referência principal;
-7. documentar qualquer transformação realizada.
+1. estrutura e tipos de dados;
+2. duplicidades por `invoice_id`;
+3. sobreposição entre as bases;
+4. moedas e unidades monetárias;
+5. consistência entre quantidade, preço unitário e preço total;
+6. definição da base de referência;
+7. transformações relevantes.
+
+A consolidação resultante estabelece **110 transações únicas e 323 unidades**. Os 30 registros da `Updated_Anbernic_Sales_Data.csv` correspondentes por `invoice_id` não são somados novamente.
 
 ## 3. Cuidados com os Dados
 
 Os arquivos contêm campos de identificação e informações pessoais dos compradores. Esses dados devem ser utilizados somente quando necessários à análise e não devem ser reproduzidos nos resultados, gráficos ou exemplos públicos.
 
 Como existem registros em diferentes moedas, valores monetários de moedas distintas não devem ser agregados diretamente sem conversão documentada.
+
+## 4. Status
+
+**Auditoria das planilhas: CONCLUÍDA.**
+
+A base analítica oficial utilizada nos resultados consolidados é composta por **110 transações únicas e 323 unidades vendidas**.
 
 ---
 
