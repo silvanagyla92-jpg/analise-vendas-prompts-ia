@@ -4,6 +4,8 @@ Projeto desenvolvido por **Nágyla Silva** para demonstrar a aplicação prátic
 
 > **Desafio:** DIO — análise de relatórios de vendas com ferramentas de Inteligência Artificial.
 
+> **Licença:** documentação, prompts, análises e demais materiais autorais deste portfólio são disponibilizados sob **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)**, conforme `LICENSE`. Os dados de terceiros permanecem sujeitos às suas respectivas condições de uso.
+
 ## 1. Objetivo
 
 Explorar dados de vendas utilizando prompts estruturados para:
@@ -44,6 +46,7 @@ A IA é utilizada como ferramenta de apoio. As respostas geradas não são trata
 ```text
 analise-vendas-prompts-ia/
 ├── README.md
+├── LICENSE
 ├── dados/
 │   ├── README.md
 │   ├── relatorio_auditoria_dados.md
@@ -124,11 +127,11 @@ Os resultados quantitativos consolidados devem utilizar exclusivamente a base de
 
 ## 8. Validação
 
-Sempre que possível, cada insight será acompanhado de:
+Os insights consolidados são acompanhados, quando aplicável, de:
 
 **Evidência → Cálculo → Interpretação → Impacto potencial → Recomendação**
 
-Também serão registradas limitações, dados ausentes e situações em que a IA possa apresentar uma interpretação que não seja sustentada pela base.
+Também são registradas limitações, dados ausentes e situações em que a IA possa apresentar uma interpretação que não seja sustentada pela base.
 
 ## 9. Documentação
 
@@ -138,6 +141,7 @@ Também serão registradas limitações, dados ausentes e situações em que a I
 - [Resultados](resultados/README.md)
 - [Evidências](evidencias/README.md)
 - [Documentação técnica](docs/README.md)
+- [Licença](LICENSE)
 
 ## 10. Autoria
 
